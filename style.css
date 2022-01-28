@@ -1,7 +1,8 @@
 /* Global reset CSS */
-*,
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+*,
 ::after,
 ::before {
     margin: 0;
@@ -9,10 +10,11 @@
     box-sizing: border-box;
 }
 
-
 /* Police */ 
 body {
     font-family: 'Poppins', sans-serif;
+    position: relative;
+    z-index: 99;
 }
 
 /* Titres des onglets et dans les pages */
@@ -29,30 +31,27 @@ body {
 
 .font-regular-white{
     color: white;
-    font-size: 24;
+    font-size: 18px;
 }
 
 .font-regular-grey{
     color: #bbbbbb;
-    font-size: 24;
+    font-size: 24px;
 }
 
 /*Titres en haut des pages*/
-
 .font-regular-blue-28{
     color: #050729;
-    font-size: 28;
+    font-size: 28px;
 }
 
 /*Titres des catégories du menu*/
-
 .font-regular-blue-20{
     color: #050729;
-    font-size: 20;
+    font-size: 20px;
 }
 
 /* Pour l'onglet sélectionné dans le menu*/
-
 .font-semibold-blue{
     color: #050729;
     font-weight: 600;
@@ -60,8 +59,7 @@ body {
 }
 
 /*Texte dans "Projet" sur la page d'accueil*/
-
 .font-regular-blue-16{
     color: #050729;
-    font-size: 16;
+    font-size: 16px;
 }

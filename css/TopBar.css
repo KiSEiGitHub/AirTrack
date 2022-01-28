@@ -1,0 +1,39 @@
+.Topbar {
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    box-shadow: rgba(175, 175, 175, 0.24) 0px 3px 8px;
+    position: fixed;
+    z-index: 5;
+}
+
+.Topbar img {
+    top: 14px;
+    position: absolute;
+    width: 150px;
+    left: 20px;
+    z-index: 100;
+}
+
+.Topbar .leftSide {
+    display: flex;
+    position: absolute;
+    width: 150px;
+    height: 70px;
+    right: 0;
+    align-items: center;
+}
+
+.Topbar .leftSide p {
+    position: relative;
+    top: 8px;
+    left: 10px;
+}
+
+.Topbar .leftSide .PP {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgb(61, 35, 35);
+}
