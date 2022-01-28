@@ -1,9 +1,9 @@
 <?php 
     // Fonction qui sont importée
-    require_once('./fonction/Insertion');
-    require_once('./fonction/Modification');
-    require_once('./fonction/Suppresion');
-    require_once('./fonction/Selection');
+    require_once('./fonction/Insertion.php');
+    require_once('./fonction/Modification.php');
+    require_once('./fonction/Suppression.php');
+    require_once('./fonction/Selection.php');
 ?>
 
 <!DOCTYPE html>
@@ -24,6 +24,7 @@
 </head>
 
 <body>
+    <h1>Hello World</h1>
     <!-- CDN Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
