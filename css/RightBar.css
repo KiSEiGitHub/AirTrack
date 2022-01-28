@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
 .RightBar {
     width: 350px;
     height: 100vh;
@@ -6,12 +10,25 @@
     margin-top: 70px;
     padding: 20px 30px;
     color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.RightBar h4:nth-child(2) {
+    margin-bottom: 17px;
+}
+
+.RightBar h4:nth-child(4) {
+    margin-bottom: 17px;
 }
 
 .RightBar .block {
     width: 200px;
     height: auto;
-    background-color: indianred;
     position: relative;
     left: 20px;
+}
+
+.RightBar .block .iconSpacing {
+    margin-right: 20px;
+    font-size: 18px;
 }
