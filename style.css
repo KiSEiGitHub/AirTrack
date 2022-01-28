@@ -1,5 +1,7 @@
 /* Global reset CSS */
 *,
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 ::after,
 ::before {
     margin: 0;
@@ -7,5 +9,30 @@
     box-sizing: border-box;
 }
 
-/* Typographie */ 
 
+/* Typographie */ 
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.font-regular-blue{
+    color: #050729;
+}
+
+.font-semibold-blue{
+    color: #050729;
+    font-weight: 600;
+
+}
+
+.font-regular-red{
+    color: #f00;
+}
+
+.font-regular-white{
+    color: white;
+}
+
+.font-regular-grey{
+    color: #bbbbbb;
+}
