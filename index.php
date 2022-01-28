@@ -1,3 +1,11 @@
+<?php 
+    // Fonction qui sont importée
+    require_once('./fonction/Insertion');
+    require_once('./fonction/Modification');
+    require_once('./fonction/Suppresion');
+    require_once('./fonction/Selection');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
