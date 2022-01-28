@@ -2,4 +2,5 @@
 <?php
 function Selection()
 {
+    $con = connexion();
 }

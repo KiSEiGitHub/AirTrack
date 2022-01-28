@@ -2,4 +2,5 @@
 <?php
 function Suppression()
 {
+    $con = connexion();
 }

@@ -2,4 +2,5 @@
 <?php
 function Modification()
 {
+    $con = connexion();
 }
