@@ -42,7 +42,7 @@ create table vol (
     idaeroport2 int(10) not null,
     idpilote1 int(10) not null,
     idpilote2 int(10) not null,
-     foreign key(idaeroport1) references aeroport(idaeroport),
+    foreign key(idaeroport1) references aeroport(idaeroport),
     foreign key(idaeroport2) references aeroport(idaeroport),
     foreign key(idpilote1) references pilote(idpilote),
     foreign key(idpilote2) references pilote(idpilote),
