@@ -13,6 +13,8 @@
 /* Police */ 
 body {
     font-family: 'Poppins', sans-serif;
+    position: relative;
+    z-index: 99;
 }
 
 /* Titres des onglets et dans les pages */
@@ -29,7 +31,7 @@ body {
 
 .font-regular-white{
     color: white;
-    font-size: 24px;
+    font-size: 18px;
 }
 
 .font-regular-grey{

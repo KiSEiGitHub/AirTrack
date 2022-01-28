@@ -1,9 +1,10 @@
 .Topbar {
     width: 100%;
     height: 70px;
+    background-color: #fff;
     box-shadow: rgba(175, 175, 175, 0.24) 0px 3px 8px;
     position: fixed;
-    z-index: 4;
+    z-index: 5;
 }
 
 .Topbar img {
@@ -11,7 +12,7 @@
     position: absolute;
     width: 150px;
     left: 20px;
-    z-index: 2;
+    z-index: 100;
 }
 
 .Topbar .leftSide {

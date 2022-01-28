@@ -15,10 +15,12 @@ require_once('./fonction/Selection.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet avion</title>
+
     <!-- Css Perso -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/TopBar.css">
     <link rel="stylesheet" href="css/RightBar.css">
+    <link rel="stylesheet" href="css/MainBlock.css">
     <!-- CDN Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
@@ -37,36 +39,55 @@ require_once('./fonction/Selection.php');
     </div>
     <!-- Right Bar menu -->
     <div class="RightBar">
-        <h4>Accueil</h4>
-        <h4>Formulaire</h4>
+        <h4 class="font-regular-white">Accueil</h4>
+        <h4 class="font-regular-white">Formulaire</h4>
         <div class="block">
-            <p>
-                <i class="fas fa-plane-departure iconSpacing"></i> Vols
-            </p>
-            <p>
-                <i class="fas fa-plane iconSpacing"></i> Avions
-            </p>
-            <p>
-                <i class="fas fa-user-tie iconSpacing"></i> Pilotes
-            </p>
-            <p>
-                <i class="fas fa-map-marker-alt iconSpacing"></i> Aéroport
-            </p>
+            <div>
+                <div class="sous-block">
+                    <i class="fas fa-plane-departure iconSpacing"></i>
+                    <span>Vols</span>
+                </div>
+                <div class="sous-block">
+                    <i class="fas fa-plane iconSpacing"></i>
+                    <span style="position: relative; left: 2px">Avions</span>
+                </div>
+                <div class="sous-block">
+                    <i class="fas fa-user-tie iconSpacing"></i>
+                    <span style="position: relative; left: 6px">Pilotes</span>
+                </div>
+                <div class="sous-block">
+                    <i class="fas fa-map-marker-alt iconSpacing"></i>
+                    <span style="position: relative; left: 8px">Aéroport</span>
+                </div>
+            </div>
         </div>
-        <h4>Informations</h4>
+        <h4 class="font-regular-white">Informations</h4>
         <div class="block">
-            <p>
-                <i class="fas fa-plane-departure iconSpacing"></i> Vols
-            </p>
-            <p>
-                <i class="fas fa-plane iconSpacing"></i> Avions
-            </p>
-            <p>
-                <i class="fas fa-user-tie iconSpacing"></i> Pilotes
-            </p>
-            <p>
-                <i class="fas fa-map-marker-alt iconSpacing"></i> Aéroport
-            </p>
+            <div>
+                <div class="sous-block">
+                    <i class="fas fa-plane-departure iconSpacing"></i>
+                    <span>Vols</span>
+                </div>
+                <div class="sous-block">
+                    <i class="fas fa-plane iconSpacing"></i>
+                    <span style="position: relative; left: 2px">Avions</span>
+                </div>
+                <div class="sous-block">
+                    <i class="fas fa-user-tie iconSpacing"></i>
+                    <span style="position: relative; left: 6px">Pilotes</span>
+                </div>
+                <div class="sous-block">
+                    <i class="fas fa-map-marker-alt iconSpacing"></i>
+                    <span style="position: relative; left: 8px">Aéroport</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Block -->
+    <div class="mainBlock">
+        <div class="Sous-Main-Block">
+            <?php require_once('./pages/Home.php') ?>
         </div>
     </div>
     <!-- CDN Bootstrap JS -->
