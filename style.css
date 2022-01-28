@@ -10,14 +10,48 @@
 }
 
 
-/* Typographie */ 
+/* Police */ 
 body {
     font-family: 'Poppins', sans-serif;
 }
 
+/* Titres des onglets et dans les pages */
+
 .font-regular-blue{
     color: #050729;
+    font-size: 24;
 }
+
+.font-regular-red{
+    color: #f00;
+    font-size: 24;
+}
+
+.font-regular-white{
+    color: white;
+    font-size: 24;
+}
+
+.font-regular-grey{
+    color: #bbbbbb;
+    font-size: 24;
+}
+
+/*Titres en haut des pages*/
+
+.font-regular-blue-28{
+    color: #050729;
+    font-size: 28;
+}
+
+/*Titres des catégories du menu*/
+
+.font-regular-blue-20{
+    color: #050729;
+    font-size: 20;
+}
+
+/* Pour l'onglet sélectionné dans le menu*/
 
 .font-semibold-blue{
     color: #050729;
@@ -25,14 +59,9 @@ body {
 
 }
 
-.font-regular-red{
-    color: #f00;
-}
+/*Texte dans "Projet" sur la page d'accueil*/
 
-.font-regular-white{
-    color: white;
-}
-
-.font-regular-grey{
-    color: #bbbbbb;
+.font-regular-blue-16{
+    color: #050729;
+    font-size: 16;
 }
