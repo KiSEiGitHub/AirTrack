@@ -1,9 +1,10 @@
-<?php 
-    // Fonction qui sont importée
-    require_once('./fonction/Insertion.php');
-    require_once('./fonction/Modification.php');
-    require_once('./fonction/Suppression.php');
-    require_once('./fonction/Selection.php');
+<?php
+// Fonction qui sont importée
+require_once('./fonction/Fonction.php');
+require_once('./fonction/Insertion.php');
+require_once('./fonction/Modification.php');
+require_once('./fonction/Suppression.php');
+require_once('./fonction/Selection.php');
 ?>
 
 <!DOCTYPE html>
