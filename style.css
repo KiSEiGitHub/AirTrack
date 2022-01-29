@@ -136,3 +136,28 @@ a {
     height: 100px;
     margin-left: 70px;
 }
+
+/* Le global style des tableaux sur les pages information */
+.GlobalTable {
+    margin-top: 20px;
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 25px;
+    border: 1px solid #bbbbbb;
+}
+
+.GlobalTable th {
+    border: 1px solid #bbbbbb;
+    padding: 25px;
+    margin-top: 20px;
+    border-top-left-radius: 20px;
+    text-align: center;
+    color: #050729;
+}
+
+.GlobalTable tr td {
+    padding: 25px;
+    text-align: center;
+    border: 1px solid #bbbbbb;
+     color: #444779;
+}
