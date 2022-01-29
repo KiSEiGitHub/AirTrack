@@ -54,6 +54,10 @@
                     <input type="text" name="piltwo" placeholder="Nom du pilote n°1">
                 </div>
             </div>
+            <div class="btn-group">
+                <input type="reset" name="btn-sub" value="Effacer">
+                <input type="submit" name="btn-sub" value="Soumettre" class="btn-danger">
+            </div>
         </form>
     </div>
 </div>
