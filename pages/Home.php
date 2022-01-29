@@ -21,7 +21,7 @@
                 - Afficher une barre de menu ainsi qu'un pied de page
             </p>
 
-            </p class="font-regular-blue-16">
+            <p class="font-regular-blue-16">
             Nous sommes heureux de vous présenter notre site et espérons qu'il ai atteint nos objectifs.
             </p>
         </div>
