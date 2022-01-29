@@ -21,12 +21,12 @@ body {
 
 .font-regular-blue{
     color: #050729;
-    font-size: 24;
+    font-size: 24px;
 }
 
 .font-regular-red{
     color: #f00;
-    font-size: 24;
+    font-size: 24px;
 }
 
 .font-regular-white{
@@ -62,4 +62,10 @@ body {
 .font-regular-blue-16{
     color: #050729;
     font-size: 16px;
+}
+
+/* Reset CSS pour les balises a (balise de lien) */
+a {
+    text-decoration: none ;
+    color: #fff;
 }
