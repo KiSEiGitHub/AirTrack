@@ -1,6 +1,6 @@
 /* Global reset CSS */
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 *,
 ::after,
@@ -10,62 +10,129 @@
     box-sizing: border-box;
 }
 
-/* Police */ 
+/* Police */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     position: relative;
     z-index: 99;
 }
 
 /* Titres des onglets et dans les pages */
 
-.font-regular-blue{
+.font-regular-blue {
     color: #050729;
     font-size: 24px;
 }
 
-.font-regular-red{
+.font-regular-red {
     color: #f00;
     font-size: 24px;
 }
 
-.font-regular-white{
+.font-regular-white {
     color: white;
     font-size: 18px;
 }
 
-.font-regular-grey{
+.font-regular-grey {
     color: #bbbbbb;
     font-size: 24px;
 }
 
 /*Titres en haut des pages*/
-.font-regular-blue-28{
+.font-regular-blue-28 {
     color: #050729;
     font-size: 28px;
 }
 
 /*Titres des catégories du menu*/
-.font-regular-blue-20{
+.font-regular-blue-20 {
     color: #050729;
     font-size: 20px;
 }
 
 /* Pour l'onglet sélectionné dans le menu*/
-.font-semibold-blue{
+.font-semibold-blue {
     color: #050729;
     font-weight: 600;
-
 }
 
 /*Texte dans "Projet" sur la page d'accueil*/
-.font-regular-blue-16{
+.font-regular-blue-16 {
     color: #050729;
     font-size: 16px;
 }
 
 /* Reset CSS pour les balises a (balise de lien) */
 a {
-    text-decoration: none ;
+    text-decoration: none;
     color: #fff;
+}
+
+/* Pour toutes les pages formulaire le style pour l'icone */
+/* Pour utiliser cette class aller voir le fichier qui se trouve ici --> ./vues/vol.php */
+.IconCenter i {
+    margin-top: 25px;
+    display: block;
+    text-align: center;
+    font-size: 120px;
+    color: #050729;
+}
+
+/* Vue que tous les formulaire c'est le même style, je l'ajoute en tant que style global */
+/* Ici le style global de tous les formulaire */
+/* Voir utilisation dans vues/vol.php */
+.Formulaire {
+    border-radius: 20px;
+    width: 80%;
+    height: auto;
+    border: 1px solid #bbbbbb;
+    margin: 30px auto 0;
+    padding: 40px;
+    position: relative;
+}
+
+.Formulaire label::after {
+    content: '*';
+    color: #f00;
+}
+
+.Formulaire input {
+    margin-top: 10px;
+    display: block;
+    border-radius: 20px;
+    outline: none;
+    width: 400px;
+    border: none;
+    height: 55px;
+    background-color: #ececec;
+    padding: 10px 15px;
+}
+
+.Formulaire .parent {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Formulaire .btn-group input[type=submit] {
+    width: 150px;
+    margin-right: 15px;
+    background-color: #f00;
+    color: #fff;
+}
+
+.Formulaire .btn-group input[type=reset] {
+    width: 150px !important;
+    margin-right: 15px;
+    border: 1px solid #f00;
+    background-color: #fff;
+    color: #f03;
+}
+
+.btn-group {
+    display: flex;
+    width: 500px;
+    height: 100px;
+    margin-left: 70px;
 }
