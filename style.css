@@ -89,6 +89,7 @@ a {
     border: 1px solid #bbbbbb;
     margin: 30px auto 0;
     padding: 40px;
+    position: relative;
 }
 
 .Formulaire label::after {
