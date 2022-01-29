@@ -114,3 +114,25 @@ a {
     display: flex;
     justify-content: space-around;
 }
+
+.Formulaire .btn-group input[type=submit] {
+    width: 150px;
+    margin-right: 15px;
+    background-color: #f00;
+    color: #fff;
+}
+
+.Formulaire .btn-group input[type=reset] {
+    width: 150px !important;
+    margin-right: 15px;
+    border: 1px solid #f00;
+    background-color: #fff;
+    color: #f03;
+}
+
+.btn-group {
+    display: flex;
+    width: 500px;
+    height: 100px;
+    margin-left: 70px;
+}
