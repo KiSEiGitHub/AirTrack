@@ -6,3 +6,34 @@
     left: 300px;
     text-indent: 3px;
 }
+
+.projetBlock {
+    margin-top: 55px;
+    width: 800px;
+    height: 500px;
+    border: 2px solid #d4d4d4;
+    border-radius: 20px;
+}
+
+.Projettitle {
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+    height: 75px;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.ProjetPara {
+    padding: 10px 20px;
+    margin-top: 50px;
+}
+
+.homeTab {
+    width: 100%;
+}
+
+.homeTab th, .homeTab td {
+    border: 1px solid #d4d4d4;
+    text-align: center;
+    padding: 20px;
+}
