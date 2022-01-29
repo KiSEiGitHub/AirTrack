@@ -46,6 +46,18 @@ require_once('./fonction/LinkFunction.php');
     <!-- Right Bar menu blue -->
     <div class="RightBar">
         <h4 class="font-regular-white">Accueil</h4>
+        <div class="block">
+            <div>
+                <div class="sous-block">
+                    <i class="fas fa-tachometer-alt iconSpacing"></i>
+                    <a href="index.php?page=0" style="position: relative; left: -2px">Tableau de bord</a>
+                </div>
+                <div class="sous-block">
+                    <i class="fas fa-tasks iconSpacing"></i>
+                    <a href="index.php?page=1">Tâches</a>
+                </div>
+            </div>
+        </div>
         <h4 class="font-regular-white">Formulaire</h4>
         <div class="block">
             <div>
@@ -94,12 +106,12 @@ require_once('./fonction/LinkFunction.php');
     <!-- Ici sera la disposition des pages -->
     <div class="mainBlock">
         <div class="Sous-Main-Block">
-            <?php 
-                if(isset($_GET['page'])){
-                    LinkFunction($_GET['page']);
-                } else {
-                    LinkFunction(0);
-                }
+            <?php
+            if (isset($_GET['page'])) {
+                LinkFunction($_GET['page']);
+            } else {
+                LinkFunction(0);
+            }
             ?>
         </div>
     </div>
