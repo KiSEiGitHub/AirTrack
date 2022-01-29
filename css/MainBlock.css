@@ -5,5 +5,9 @@
     top: 70px;
     z-index: -2;
     text-indent: 19em;
-    padding: 95px 30px;
+    padding: 40px;
+}
+
+.mainBlock .Sous-Main-Block {
+    position: relative;
 }

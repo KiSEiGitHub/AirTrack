@@ -5,6 +5,7 @@ require_once('./fonction/Insertion.php');
 require_once('./fonction/Modification.php');
 require_once('./fonction/Suppression.php');
 require_once('./fonction/Selection.php');
+require_once('./fonction/LinkFunction.php');
 ?>
 
 <!DOCTYPE html>
@@ -17,19 +18,23 @@ require_once('./fonction/Selection.php');
     <title>Projet avion</title>
 
     <!-- Css Perso -->
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/TopBar.css">
     <link rel="stylesheet" href="css/RightBar.css">
     <link rel="stylesheet" href="css/MainBlock.css">
+    <link rel="stylesheet" href="css/Home.css">
+
     <!-- CDN Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- reset CSS + Global CSS -->
+    <link rel="stylesheet" href="style.css">
 
     <!-- CDN Font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
-    <!-- Bar du haut -->
+    <!-- Top bar  -->
     <div class="Topbar">
         <img src="assets/logo.png" alt="logo">
         <div class="leftSide">
@@ -37,7 +42,8 @@ require_once('./fonction/Selection.php');
             <p>Admin</p>
         </div>
     </div>
-    <!-- Right Bar menu -->
+
+    <!-- Right Bar menu blue -->
     <div class="RightBar">
         <h4 class="font-regular-white">Accueil</h4>
         <h4 class="font-regular-white">Formulaire</h4>
@@ -45,19 +51,19 @@ require_once('./fonction/Selection.php');
             <div>
                 <div class="sous-block">
                     <i class="fas fa-plane-departure iconSpacing"></i>
-                    <span>Vols</span>
+                    <a href="index.php?page=2">Vols</a>
                 </div>
                 <div class="sous-block">
                     <i class="fas fa-plane iconSpacing"></i>
-                    <span style="position: relative; left: 2px">Avions</span>
+                    <a href="index.php?page=3" style="position: relative; left: 2px">Avions</a>
                 </div>
                 <div class="sous-block">
                     <i class="fas fa-user-tie iconSpacing"></i>
-                    <span style="position: relative; left: 6px">Pilotes</span>
+                    <a href="index.php?page=4" style="position: relative; left: 7px">Pilotes</a>
                 </div>
                 <div class="sous-block">
                     <i class="fas fa-map-marker-alt iconSpacing"></i>
-                    <span style="position: relative; left: 8px">Aéroport</span>
+                    <a href="index.php?page=5" style="position: relative; left: 8px">Aéroport</a>
                 </div>
             </div>
         </div>
@@ -66,30 +72,38 @@ require_once('./fonction/Selection.php');
             <div>
                 <div class="sous-block">
                     <i class="fas fa-plane-departure iconSpacing"></i>
-                    <span>Vols</span>
+                    <a href="index.php?page=6">Vols</a>
                 </div>
                 <div class="sous-block">
                     <i class="fas fa-plane iconSpacing"></i>
-                    <span style="position: relative; left: 2px">Avions</span>
+                    <a href="index.php?page=7" style="position: relative; left: 2px">Avions</a>
                 </div>
                 <div class="sous-block">
                     <i class="fas fa-user-tie iconSpacing"></i>
-                    <span style="position: relative; left: 6px">Pilotes</span>
+                    <a href="index.php?page=8" style="position: relative; left: 7px">Pilotes</a>
                 </div>
                 <div class="sous-block">
                     <i class="fas fa-map-marker-alt iconSpacing"></i>
-                    <span style="position: relative; left: 8px">Aéroport</span>
+                    <a href="index.php?page=9" style="position: relative; left: 8px">Aéroport</a>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Main Block -->
+    <!-- Ici sera la disposition des pages -->
     <div class="mainBlock">
         <div class="Sous-Main-Block">
-            <?php require_once('./pages/Home.php') ?>
+            <?php 
+                if(isset($_GET['page'])){
+                    LinkFunction($_GET['page']);
+                } else {
+                    LinkFunction(0);
+                }
+            ?>
         </div>
     </div>
+
     <!-- CDN Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
