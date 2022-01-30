@@ -89,7 +89,7 @@ a {
     width: 80%;
     height: auto;
     border: 1px solid #bbbbbb;
-    margin: 100px auto 0;
+    margin: 25px auto 0;
     padding: 40px;
     position: relative;
 }
@@ -98,7 +98,7 @@ a {
 /* ::after c'est une pseudo class qui a pour but de r'ajouter du contenu sans r'ajouter du contenu au DOM */
 /* Donc juste mettez le label et y'aura automatiquement la petit étoile en rouge */
 .Formulaire label::after {
-    content: '*';
+    content: "*";
     color: #f00;
 }
 
