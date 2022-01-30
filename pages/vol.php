@@ -21,16 +21,21 @@
             <th>Pilote N°2</th>
         </tr>
         <!-- Ici c'est en attendant mais faudra remplacer par le php -->
-        <tr>
-            <td>exemple</td>
-            <td>exemple</td>
-            <td>exemple</td>
-            <td>exemple</td>
-            <td>exemple</td>
-            <td>exemple</td>
-            <td>exemple</td>
-            <td>exemple</td>
-        </tr>
+        <?php
+        $lesVols = Selection("vol");
+        foreach ($lesVols as $unvol) {
+            echo "<tr>";
+                echo "<td>". $unvol['desivol']. "</td>";
+                echo "<td>". $unvol['duree']. "</td>";
+                echo "<td>". $unvol['datevole']. "</td>";
+                echo "<td>". $unvol['idavion']. "</td>";
+                echo "<td>". $unvol['idaeroport1']. "</td>";
+                echo "<td>". $unvol['idaeroport2']. "</td>";
+                echo "<td>". $unvol['idpilote1']. "</td>";
+                echo "<td>". $unvol['idpilote2']. "</td>";
+            echo "</tr>";
+        }
+        ?>
     </table>
 
 </div>
