@@ -132,7 +132,7 @@ a {
 }
 
 /* ça vise UNIQUEMENT les inputs de type submit */
-.Formulaire .btn-group input[type=submit] {
+.Formulaire .btn-group input[type="submit"] {
     width: 150px;
     margin-right: 15px;
     background-color: #f00;
@@ -140,7 +140,7 @@ a {
 }
 
 /* ça vise UNIQUEMENT les inputs de type reset */
-.Formulaire .btn-group input[type=reset] {
+.Formulaire .btn-group input[type="reset"] {
     width: 150px !important;
     margin-right: 15px;
     border: 1px solid #f00;
@@ -155,4 +155,28 @@ a {
     height: 100px;
     margin-top: 25px;
     justify-content: flex-end;
+}
+
+/* Vue que tous les tableaux sont les mêmes alors je fais le style global pour tous  */
+/* Exemple d'utilisation dans ./pages/vol.php */
+/* Vous devez bien respecter cette structure  */
+/* Cet à dire entourer les th d'un tr et les td d'un tr */
+.tableau {
+    margin: 25px auto 0;
+    height: auto;
+    border-radius: 25px;
+}
+
+/* ça vise les th et les td */
+.tableau tr th,
+td {
+    border: 1px solid #bbbbbb;
+    border-top-left-radius: 25px;
+    color: #050729;
+    padding: 15px;
+    text-align: center;
+}
+
+.tableau tr td {
+    color: #0e136b;
 }

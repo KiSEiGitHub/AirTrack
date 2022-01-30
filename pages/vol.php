@@ -9,4 +9,28 @@
         <i class="fas fa-plane-departure"></i>
     </div>
 
+    <table class="tableau">
+        <tr>
+            <th>N° de vol</th>
+            <th>Durée</th>
+            <th>Date</th>
+            <th>Matricule de l'avion</th>
+            <th>Aéroport de départ</th>
+            <th>Aéroport d'arrivé</th>
+            <th>Pilote N°1</th>
+            <th>Pilote N°2</th>
+        </tr>
+        <!-- Ici c'est en attendant mais faudra remplacer par le php -->
+        <tr>
+            <td>exemple</td>
+            <td>exemple</td>
+            <td>exemple</td>
+            <td>exemple</td>
+            <td>exemple</td>
+            <td>exemple</td>
+            <td>exemple</td>
+            <td>exemple</td>
+        </tr>
+    </table>
+
 </div>
