@@ -87,7 +87,7 @@ a {
     width: 80%;
     height: auto;
     border: 1px solid #bbbbbb;
-    margin: 30px auto 0;
+    margin: 100px auto 0;
     padding: 40px;
     position: relative;
 }
@@ -135,4 +135,28 @@ a {
     width: 500px;
     height: 100px;
     margin-left: 70px;
+}
+
+/* CSS pour le fomulaire pilotes */
+.Formulaire .parent1 {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.formpilote input {
+    width: 100%;
+
+}
+
+.parent1 {
+    gap: 20px;
+}
+
+.parent1 > div {
+    width: 100%;
+}
+
+.parent1 input {
+    width: 100%;
 }

@@ -11,7 +11,7 @@
         <i class="fas fa-plane-departure"></i>
     </div>
 
-    <!-- Le formulaure -->
+    <!-- Le formulaire -->
     <div class="Formulaire">
         <form action="#" method="POST">
             <div class="parent">
