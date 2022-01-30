@@ -82,6 +82,8 @@ a {
 /* Vue que tous les formulaire c'est le même style, je l'ajoute en tant que style global */
 /* Ici le style global de tous les formulaire */
 /* Voir utilisation dans vues/vol.php */
+
+/* Tout les formulaires doit avoit une div avec cette classe */
 .Formulaire {
     border-radius: 20px;
     width: 80%;
@@ -92,13 +94,17 @@ a {
     position: relative;
 }
 
+/* Cette classe signifie la petite * en rouge après le label */
+/* ::after c'est une pseudo class qui a pour but de r'ajouter du contenu sans r'ajouter du contenu au DOM */
+/* Donc juste mettez le label et y'aura automatiquement la petit étoile en rouge */
 .Formulaire label::after {
     content: '*';
     color: #f00;
 }
 
+/* cette class correspecond au style d'un input vous avez aucun style a faire, juste ajouter un input */
 .Formulaire input {
-    margin-top: 10px;
+    margin: 10px 0 25px; /* 10 en haut 0 droite et gauche 25 en bas */
     display: block;
     border-radius: 20px;
     outline: none;
@@ -106,15 +112,26 @@ a {
     border: none;
     height: 55px;
     background-color: #ececec;
-    padding: 10px 15px;
+    padding: 10px 15px; /* 10 haut / bas | 15 droite / gauche */
+    width: 100%;
 }
 
+/* Pour avoir deux input sur la même ligne conforme à la maquette vous devez UTILISER cette class dans une div */
+/* Sauf que vous A TOUT PRIS mettre un parent (une div) sur les deux labels */
+/* Genre comme ça -> https://i.imgur.com/v0A6927.png */
+/* Sinon, même vos label seront des flex item et c'est pas ce qu'on veut */
 .Formulaire .parent {
-    margin-bottom: 25px;
     display: flex;
     justify-content: space-around;
+    gap: 20px;
+    width: 100%;
 }
 
+.parent > div {
+    width: 100%;
+}
+
+/* ça vise UNIQUEMENT les inputs de type submit */
 .Formulaire .btn-group input[type=submit] {
     width: 150px;
     margin-right: 15px;
@@ -122,6 +139,7 @@ a {
     color: #fff;
 }
 
+/* ça vise UNIQUEMENT les inputs de type reset */
 .Formulaire .btn-group input[type=reset] {
     width: 150px !important;
     margin-right: 15px;
@@ -130,33 +148,11 @@ a {
     color: #f03;
 }
 
+/* Cette classe permet d'aligner le deux boutons sur la même ligne */
 .btn-group {
     display: flex;
-    width: 500px;
+    width: 100%;
     height: 100px;
-    margin-left: 70px;
-}
-
-/* CSS pour le fomulaire pilotes */
-.Formulaire .parent1 {
-    margin-bottom: 25px;
-    display: flex;
-    justify-content: space-around;
-}
-
-.formpilote input {
-    width: 100%;
-
-}
-
-.parent1 {
-    gap: 20px;
-}
-
-.parent1 > div {
-    width: 100%;
-}
-
-.parent1 input {
-    width: 100%;
+    margin-top: 25px;
+    justify-content: flex-end;
 }

@@ -5,9 +5,6 @@
 <!-- Pour chaque page crée vous un css et ajouter à la suite dans index.php -->
 <div class="FrontBlock">
     <!-- Coder en dessous -->
-</div>
-<div class="FrontBlock">
-    <!-- Coder en dessous -->
 
     <!-- L'icon -->
     <div class="IconCenter">
@@ -17,37 +14,33 @@
     <!-- Le formulaire -->
     <div class="Formulaire">
         <form action="#" method="POST">
-            <div class="parent1">
-                <div class="enfant1">
+            <div class="parent">
+                <div>
                     <label for="prenompilote" class="font-regular-blue-16">Prénom</label>
                     <input type="text" name="prenompilote" placeholder="Prénom du pilote">
                 </div>
-                <div class="enfant2">
+                <div>
                     <label for="nompilote" class="font-regular-blue-16">Nom</label>
                     <input type="text" name="nompilote" placeholder="Nom du pilote">
                 </div>
             </div>
-            <div class="parent1">
-                <div class="enfant1">
+            <div class="parent">
+                <div>
                     <label for="agepilote" class="font-regular-blue-16">Âge</label>
                     <input type="text" name="agepilote" placeholder="Âge du pilote">
                 </div>
-                <div class="enfant2">
+                <div>
                     <label for="gradepilote" class="font-regular-blue-16">Grade</label>
                     <input type="text" name="gradepilote" placeholder="Grade du pilote">
                 </div>
             </div>
-            <div class="formpilote">
-                <div>
-                    <label for="emailpilote" class="font-regular-blue-16">Email</label>
-                    <input type="text" name="emailpilote" placeholder="Email du pilote">
-                </div>
-                <div>
-                    <label for="adressepilote" class="font-regular-blue-16">Adresse</label>
-                    <input type="text" name="adressepilote" placeholder="Adresse du pilote">
-                </div>
-            </div>
-</br>
+            
+            <label for="emailpilote" class="font-regular-blue-16">Email</label>
+            <input type="text" name="emailpilote" placeholder="Email du pilote">
+
+            <label for="adressepilote" class="font-regular-blue-16">Adresse</label>
+            <input type="text" name="adressepilote" placeholder="Adresse du pilote">
+
             <div class="btn-group">
                 <input type="reset" name="btn-sub" value="Effacer">
                 <input type="submit" name="btn-sub" value="Soumettre" class="btn-danger">
