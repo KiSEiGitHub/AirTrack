@@ -82,7 +82,6 @@ a {
 /* Vue que tous les formulaire c'est le même style, je l'ajoute en tant que style global */
 /* Ici le style global de tous les formulaire */
 /* Voir utilisation dans vues/vol.php */
-
 /* Tout les formulaires doit avoit une div avec cette classe */
 .Formulaire {
     border-radius: 20px;
@@ -108,7 +107,6 @@ a {
     display: block;
     border-radius: 20px;
     outline: none;
-    width: 400px;
     border: none;
     height: 55px;
     background-color: #ececec;
