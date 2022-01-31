@@ -3,6 +3,7 @@
 
 <!-- Tout votre code doit être dans la div FrontBlock -->
 <!-- Pour chaque page crée vous un css et ajouter à la suite dans index.php -->
+
 <div class="FrontBlock">
     <!-- Coder en dessous -->
 
