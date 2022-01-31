@@ -67,6 +67,7 @@ body {
 a {
     text-decoration: none;
     color: #fff;
+    display: inline-block;
 }
 
 /* Pour toutes les pages formulaire le style pour l'icone */
