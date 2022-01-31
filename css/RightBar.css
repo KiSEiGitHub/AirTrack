@@ -14,6 +14,13 @@
     z-index: 5;
 }
 
+.isActive {
+    background-color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    color: #050729;
+}
+
 .RightBar h4:nth-child(2) {
     margin-bottom: 17px;
 }
