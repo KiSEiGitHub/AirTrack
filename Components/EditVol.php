@@ -45,8 +45,12 @@
             </div>
         </div>
         <div class = "btn-group">
-            <input type = "submit" name = "btn-edit" value = "Modifier" class = "btn-danger">
+            <input type = "submit" name = "btn-edit" value = "Modifier" class = "btn-danger" id="btn">
+            <a href = "index.php?page=2" style="color: red">
+                Redirection
+            </a>
         </div>
+
     </form>
     <?php
     if (isset($_POST['btn-edit'])) {

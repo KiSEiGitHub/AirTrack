@@ -147,6 +147,19 @@ a {
     color: #f03;
 }
 
+/* Vue qu'on aura des <select> à faire ici sera le global style pour eux */
+.Formulaire select {
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    display: block;
+    width: 100%;
+    background-color: #ececec;
+    border-radius: 25px;
+    padding: 10px 15px;
+    height: 55px;
+}
+
 /* Cette classe permet d'aligner le deux boutons sur la même ligne */
 .btn-group {
     display: flex;
