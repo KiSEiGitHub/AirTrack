@@ -33,3 +33,19 @@ function CountAll($table)
     deconnexion($con);
     return $nb['nb'];
 }
+
+function selectWhere($table, $idtable, $idget)
+{
+    $r = "select * from $table where $idtable = " . $idget;
+    $con = connexion();
+
+    if ($con) {
+        $AllData = mysqli_query($con, $r);
+        $Data = mysqli_fetch_assoc($AllData);
+    } else {
+        return null;
+    }
+
+    deconnexion($con);
+    return $Data;
+}
