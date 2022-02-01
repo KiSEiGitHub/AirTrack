@@ -33,7 +33,7 @@ function Insertion(
     }
     
     if (mysqli_query($con, $sql)) {
-        echo "<p>C'est bon</p>";
+        echo "<p class='text-success'>Insertion complétée</p>";
     } else {
         echo "<p>C'est pas bon</p>";
     }
