@@ -56,7 +56,7 @@
                         $LesPilotes = Selection("pilote");
                         foreach ($LesPilotes as $Pilote) {
                             echo "<option value='" . $Pilote['idpilote'] . "'>";
-                            echo $Pilote['prenom'];
+                            echo $Pilote['prenom']. " " . $Pilote['nom'];
                             echo "</option>";
                         }
                         ?>
@@ -70,7 +70,7 @@
                         $LesPilotes = Selection("pilote");
                         foreach ($LesPilotes as $Pilote) {
                             echo "<option value='" . $Pilote['idpilote'] . "'>";
-                            echo $Pilote['prenom'];
+                            echo $Pilote['prenom']. " " . $Pilote['nom'];
                             echo "</option>";
                         }
                         ?>

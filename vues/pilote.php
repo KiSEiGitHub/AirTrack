@@ -34,7 +34,7 @@
                     <input type="text" name="gradepilote" placeholder="Grade du pilote">
                 </div>
             </div>
-            
+
             <label for="emailpilote" class="font-regular-blue-16">Email</label>
             <input type="text" name="emailpilote" placeholder="Email du pilote">
 

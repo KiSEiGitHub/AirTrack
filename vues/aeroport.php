@@ -5,7 +5,7 @@
 <!-- Pour chaque page crée vous un css et ajouter à la suite dans index.php -->
 <div class="FrontBlock">
 
-<div class="IconCenter">
+    <div class="IconCenter">
         <i class="fas fa-map-marker-alt"></i>
     </div>
 
@@ -32,7 +32,3 @@
         </form>
     </div>
 </div>
-
-
-
-    

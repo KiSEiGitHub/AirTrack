@@ -31,7 +31,7 @@ function Insertion(
     } else if ($length == 4) {
         $sql = "INSERT INTO $table($DB1, $DB2, $DB3, $DB4) VALUES ('$VAL1', '$VAL2', '$VAL3', '$VAL4')";
     }
-    
+
     if (mysqli_query($con, $sql)) {
         echo "<p class='text-success'>Insertion complétée</p>";
     } else {
