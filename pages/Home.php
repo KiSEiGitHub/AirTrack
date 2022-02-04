@@ -1,9 +1,9 @@
 <h1 class = "font-regular-blue">Tableau de bord</h1>
-
 <!-- Tout votre code doit être dans la div FrontBlock -->
 <!-- Pour chaque page crée vous un css et ajouter à la suite dans index.php -->
 <div class = "FrontBlock">
     <!-- BLock Projet -->
+
     <div class = "projetBlock">
         <div class = "Projettitle">
             <h4 class = "font-regular-blue">Projet</h4>
@@ -35,10 +35,10 @@
             <h4 class = "font-regular-blue">Entrées</h4>
         </div>
         <?php
-            $LesVol = CountAll("vol");
-            $LesAvions = CountAll("avion");
-            $LesPilotes = CountAll("pilote");
-            $LesAero = CountAll("aeroport");
+        $LesVol = CountAll("vol");
+        $LesAvions = CountAll("avion");
+        $LesPilotes = CountAll("pilote");
+        $LesAero = CountAll("aeroport");
         ?>
         <table class = "homeTab">
             <tr>
