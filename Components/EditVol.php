@@ -21,7 +21,19 @@
             </div>
             <div>
                 <label for = "matriculeavion" class = "font-regular-blue-16">Matricule de l'avion</label>
-                <input type = "number" name = "matriculeavion" value = <?php echo $UnVol['idavion'] ?>>
+                <select name = "matriculeavion" id = "matriculeavion">
+                    <option value = <?php echo $UnVol['idavion'] ?>>
+                        <?php echo $UnVol['idavion'] ?>
+                    </option>
+                    <?php
+                    $LesAvions = Selection("avion");
+                    foreach ($LesAvions as $unAvion) {
+                        echo "<option value='" . $unAvion['idavion'] . "'>";
+                        echo $unAvion['marque'];
+                        echo "</option>";
+                    }
+                    ?>
+                </select>
             </div>
         </div>
         <div class = "parent">
@@ -37,16 +49,36 @@
         <div class = "parent">
             <div>
                 <label for = "pilone" class = "font-regular-blue-16">Pilote n°1</label>
-                <input type = "number" name = "pilone" value = <?php echo $UnVol['idpilote1'] ?>>
+                <select name = "pilone" id = "pilone">
+                    <option value = "">Choisissez un pilote</option>
+                    <?php
+                    $LesPilotes = Selection("pilote");
+                    foreach ($LesPilotes as $Pilote) {
+                        echo "<option value='" . $Pilote['idpilote'] . "'>";
+                        echo $Pilote['prenom'] . " " . $Pilote['nom'];
+                        echo "</option>";
+                    }
+                    ?>
+                </select>
             </div>
             <div>
                 <label for = "piltwo" class = "font-regular-blue-16">Pilote n°2</label>
-                <input type = "number" name = "piltwo" value = <?php echo $UnVol['idpilote2'] ?>>
+                <select name = "piltwo" id = "piltwo">
+                    <option value = "">Choisissez un pilote</option>
+                    <?php
+                    $LesPilotes = Selection("pilote");
+                    foreach ($LesPilotes as $Pilote) {
+                        echo "<option value='" . $Pilote['idpilote'] . "'>";
+                        echo $Pilote['prenom'] . " " . $Pilote['nom'];
+                        echo "</option>";
+                    }
+                    ?>
+                </select>
             </div>
         </div>
         <div class = "btn-group">
-            <input type = "submit" name = "btn-edit" value = "Modifier" class = "btn-danger" id="btn">
-            <a href = "index.php?page=2" style="color: red">
+            <input type = "submit" name = "btn-edit" value = "Modifier" class = "btn-danger" id = "btn">
+            <a href = "index.php?page=2" style = "color: red">
                 Redirection
             </a>
         </div>
