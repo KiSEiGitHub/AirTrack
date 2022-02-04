@@ -22,7 +22,9 @@
             <div>
                 <label for = "matriculeavion" class = "font-regular-blue-16">Matricule de l'avion</label>
                 <select name = "matriculeavion" id = "matriculeavion">
-                    <option value = "">Choisissez un avion</option>
+                    <option value = <?php echo $UnVol['idavion'] ?>>
+                        <?php echo $UnVol['idavion'] ?>
+                    </option>
                     <?php
                     $LesAvions = Selection("avion");
                     foreach ($LesAvions as $unAvion) {
