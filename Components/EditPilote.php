@@ -1,23 +1,11 @@
-<!-- Ici sera la page ou on affichera le formulaire pour insérer des pilotes dans la bdd -->
-<h1 class="font-regular-blue">Formulaire / Pilotes</h1>
+<?php $unPilote = selectWhere("pilote", "idpilote", $_GET['idpilote']); ?>
 
-<!-- Tout votre code doit être dans la div FrontBlock -->
-<!-- Pour chaque page crée vous un css et ajouter à la suite dans index.php -->
-<div class="FrontBlock">
-    <!-- Coder en dessous -->
-
-    <!-- L'icon -->
-    <div class="IconCenter">
-        <i class="fas fa-user-tie"></i>
-    </div>
-
-    <!-- Le formulaire -->
-    <div class="Formulaire">
+<div class="Formulaire">
         <form action="#" method="POST">
             <div class="parent">
                 <div>
                     <label for="prenompilote" class="font-regular-blue-16">Prénom</label>
-                    <input type="text" name="prenompilote" placeholder="Prénom du pilote" id="prenompilote">
+                    <input type="text" name="prenompilote" placeholder="Prénom du pilote" id=<?php echo $unPilote['prenompilote'] ?>
                 </div>
                 <div>
                     <label for="nompilote" class="font-regular-blue-16">Nom</label>
@@ -48,57 +36,3 @@
         </form>
     </div>
 </div>
-<!-- Fonction qui insert les pilotes -->
-<?php
-if (isset($_POST['btn-sub'])) {
-    if(
-    !empty($_POST['prenompilote']) && !empty($_POST['nompilote']) && !empty($_POST['agepilote'])
-    && !empty($_POST['gradepilote']) && !empty($_POST['emailpilote']) && !empty($_POST['adressepilote'])
-    ) {
-        Insertion(
-            "pilote",
-            "nom",
-            "prenom",
-            "age",
-            "email",
-            "adresse",
-            "grade",
-            "null",
-            "null",
-            $_POST['nompilote'],
-            $_POST['prenompilote'],
-            $_POST['agepilote'],
-            $_POST['emailpilote'],
-            $_POST['adressepilote'],
-            $_POST['gradepilote'],
-            "null",
-            "null",
-            6
-        );
-    } else {
-        echo "<p class='text-danger'>Il faut remplir tous les champs</p>";
-    }
-}
-?>
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-    }
-    
-}
