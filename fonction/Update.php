@@ -62,3 +62,21 @@ function UpdatePilote($tab, $id)
 
     deconnexion($con);
 }
+
+function UpdateAeroport($tab, $id)
+{
+    $r = "
+        update aeroport set
+        desiaero = '" . $tab['nomaeroport'] . "',
+        adresse = '" . $tab['adresseaeroport'] . "',
+        statut = '" . $tab['statutaeroport'] . "'
+        WHERE idaeroport = $id
+    ";
+
+    $con = connexion();
+    if ($con) {
+        mysqli_query($con, $r);
+    }
+
+    deconnexion($con);
+}
