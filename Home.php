@@ -58,7 +58,6 @@ require_once('./Components/Rightbar.php');
 <div class = "mainBlock">
     <div class = "Sous-Main-Block">
         <?php
-        echo $_SESSION['pseudo'];
         if (isset($_GET['page'])) {
             LinkFunction($_GET['page']);
         } else {

@@ -4,14 +4,6 @@ if(isset($_SESSION['pseudo'])){
     header('Location: Home.php');
     exit();
 }
-// Fonction qui son importée
-require_once('./fonction/Fonction.php');
-require_once('./fonction/Insertion.php');
-require_once('./fonction/Modification.php');
-require_once('./fonction/Suppression.php');
-require_once('./fonction/Selection.php');
-require_once('./fonction/LinkFunction.php');
-require_once('./fonction/Update.php');
 ?>
 
 <!DOCTYPE html>
