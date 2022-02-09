@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if(isset($_SESSION['pseudo'])){
+if (isset($_SESSION['pseudo'])) {
     header('Location: Home.php');
     exit;
 }
@@ -44,6 +44,31 @@ require_once('./fonction/Update.php');
 </head>
 
 <body>
+
+<?php
+/*
+Fonction de connexion / déconnexion
+
+Explication :
+Quand on arrive sur le site, l'index.php est visé directement, c'est la première page qui charge
+Alors la fonction de connexion est faite ici.
+
+D'abord, je fais un formulaire qui prend un prénom et un mot de passe
+Ensuite, c'est là que je fais du php pour controller si les deux champs sont enregistré dans la bdd
+
+Les variables de session, c'est des variables qui vont être toujours active lors de l'utilisation du site
+Quand on appuie sur le bouton déconnexion, ça lance une fonction session_destroy qui veut littéralement dire
+Détruire la session, ensuite, ça nous renvoie directement ici, dans index.php pour se reconnecter
+
+Si je ne suis pas connecté, je n'ai pas accès à Home.php qui est notre site et si je suis connecté
+je n'ai pas accès à index.php logique
+
+J'ai récréé une fonction SelectAdmin juste pour controler si les inputs qu'on rentre dans les champs sont égaux
+à notre table admin
+
+*/
+?>
+
 <div class = "CoContainer">
     <h3>Connexion</h3>
     <form action = "#" method = "post">
