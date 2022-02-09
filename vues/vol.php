@@ -17,23 +17,32 @@
             <div class = "parent">
                 <div>
                     <label for = "Numvol" class = "font-regular-blue-16">Numéro de vol</label>
-                    <input type = "text" name = "numvol" placeholder = "Numéro de vol" id="Numvol">
+                    <input type = "text" name = "numvol" placeholder = "Numéro de vol" id = "Numvol">
                 </div>
                 <div>
                     <label for = "durvol" class = "font-regular-blue-16">Durée du vol (en minutes)</label>
-                    <input type = "text" name = "durvol" placeholder = "Durée de vol" id="durvol">
+                    <input type = "text" name = "durvol" placeholder = "Durée de vol" id = "durvol">
                 </div>
             </div>
             <div class = "parent">
                 <div>
                     <label for = "datevol" class = "font-regular-blue-16">Date du vol</label>
-                    <input type = "date" name = "datevol" placeholder = "Date en val (jj/mm/aa)" id="datevol">
+                    <input type = "date" name = "datevol" placeholder = "Date en val (jj/mm/aa)" id = "datevol">
                 </div>
                 <div>
-                    <!--  Ici c'est un select des avions -->
-                    <label for = "matriculeavion" class = "font-regular-blue-16">Matricule de l'avion</label>
-                    <input type = "number" name = "matriculeavion" placeholder = "Matricule de l'avion"
-                           id = "matriculeavion">
+                    <!--  Ici c'est un select des pilotes -->
+                    <label for = "matriculeavion" class = "font-regular-blue-16">Avion</label>
+                    <select name = "matriculeavion" id = "matriculeavion">
+                        <option value = "">Choisissez un avion</option>
+                        <?php
+                        $LesAvions = Selection("avion");
+                        foreach ($LesAvions as $unAvion) {
+                            echo "<option value='" . $unAvion['idavion'] . "'>";
+                            echo $unAvion['marque'];
+                            echo "</option>";
+                        }
+                        ?>
+                    </select>
                 </div>
             </div>
             <div class = "parent">
@@ -51,7 +60,7 @@
                 <div>
                     <!--  Ici c'est un select des pilotes -->
                     <label for = "pilone" class = "font-regular-blue-16">Pilote n°1</label>
-                    <select name = "pilone" id="pilone">
+                    <select name = "pilone" id = "pilone">
                         <option value = "">Choisissez un pilote</option>
                         <?php
                         $LesPilotes = Selection("pilote");
@@ -65,7 +74,7 @@
                 </div>
                 <div>
                     <label for = "piltwo" class = "font-regular-blue-16">Pilote n°2</label>
-                    <select name = "piltwo" id="piltwo">
+                    <select name = "piltwo" id = "piltwo">
                         <option value = "">Choisissez un pilote</option>
                         <?php
                         $LesPilotes = Selection("pilote");

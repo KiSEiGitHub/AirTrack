@@ -35,10 +35,10 @@
             echo "<td>" . $unvol['idpilote1'] . "</td>";
             echo "<td>" . $unvol['idpilote2'] . "</td>";
             echo "<td>";
-            echo "<a href='index.php?page=2&action=sup&idvol=" . $unvol['idvol'] . "'>";
+            echo "<a href='home.php?page=2&action=sup&idvol=" . $unvol['idvol'] . "'>";
             echo "<button class='btn-danger btn' style='margin-right: 5px' name='btnDelete'>Supprimer</button>";
             echo "</a>";
-            echo "<a href='index.php?page=2&action=edit&idvol=" . $unvol['idvol'] . "'>";
+            echo "<a href='home.php?page=2&action=edit&idvol=" . $unvol['idvol'] . "'>";
             echo "<button class='btn-primary btn'>Modifier</button>";
             echo "</a>";
             echo "</td>";

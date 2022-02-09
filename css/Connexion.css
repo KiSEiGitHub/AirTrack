@@ -1,0 +1,13 @@
+.CoContainer {
+    height: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.CoContainer input {
+    border-radius: 20px;
+    padding: 5px 20px;
+    border: none;
+    outline: none;
+    background-color: #eeeeee;
+}
