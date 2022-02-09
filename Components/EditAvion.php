@@ -26,7 +26,7 @@
         </div>
         <div class = "btn-group">
             <input type = "submit" name = "btn-edit" value = "Modifier" class = "btn-danger" id = "btn">
-            <a href = "index.php?page=3" style = "color: red">
+            <a href = "Home.php?page=3" style = "color: red">
                 Redirection
             </a>
         </div>
