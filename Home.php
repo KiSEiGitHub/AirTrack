@@ -49,12 +49,11 @@ require_once('./fonction/Update.php');
     <img src = "assets/logo.png" alt = "logo">
     <div class = "leftSide">
         <div class = "PP"></div>
-        <p>
+        <span class="badge bg-primary" style="position:relative; left: 20px">
             <?php
             echo $_SESSION['pseudo']
             ?>
-        </p>
-        <a href = "Deconnexion.php" style = "color: blue">Deco</a>
+        </span>
     </div>
 
 </div>
