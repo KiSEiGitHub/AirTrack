@@ -1,1 +1,0 @@
-ici les settings de la bdd
