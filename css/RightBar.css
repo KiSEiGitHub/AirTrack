@@ -45,3 +45,9 @@
 .RightBar .block .sous-block {
     margin-bottom: 18px;
 }
+
+.disconnect {
+    position: absolute;
+    bottom: 100px;
+    z-index: 999999;
+}
