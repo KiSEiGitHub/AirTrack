@@ -1,9 +1,5 @@
 <?php
 session_start();
-if(isset($_SESSION['pseudo'])){
-    header('Location: Home.php');
-    exit();
-}
 // Fonction qui son importée
 require_once('./fonction/Fonction.php');
 require_once('./fonction/Insertion.php');
@@ -43,34 +39,35 @@ require_once('./fonction/Update.php');
 </head>
 
 <body>
-<div class = "CoContainer">
-    <h3>Connexion</h3>
-    <form action = "#" method = "post">
-        <input type = "text" name = "pseudo" placeholder = "pseudo">
-        <input type = "text" name = "mdp" placeholder = "mot de passe">
-        <input type = "submit" name = "btn-co" value = "Connexion">
-    </form>
-    <?php
 
-    $psd = $_POST['pseudo'];
-    $mdp = $_POST['mdp'];
+<div class = "Topbar">
+    <img src = "assets/logo.png" alt = "logo">
+    <div class = "leftSide">
+        <div class = "PP"></div>
+        <p>Admin</p>
+        <a href="Deconnexion.php" style="color: blue">Deco</a>
+    </div>
 
-    $_SESSION['pseudo'] = "Tom";
-    $_SESSION['mdp'] = 1234;
-
-    if (isset($_POST['btn-co'])) {
-        if (!empty($_POST['pseudo']) && !empty($_POST['mdp'])) {
-            if ($psd == "Tom" && $mdp == 1234) {
-                header('Location: Home.php');
-            } else {
-                echo "<p class='text-warning'>Mot de passe ou pseudo incorrect</p>";
-            }
-        } else {
-            echo "<p class='text-danger'>Remplir tous les champs</p>";
-        }
-    }
-    ?>
 </div>
+
+<?php
+require_once('./Components/Rightbar.php');
+
+?>
+
+<div class = "mainBlock">
+    <div class = "Sous-Main-Block">
+        <?php
+        echo $_SESSION['pseudo'];
+        if (isset($_GET['page'])) {
+            LinkFunction($_GET['page']);
+        } else {
+            LinkFunction(0);
+        }
+        ?>
+    </div>
+</div>
+
 
 <!--  js  -->
 <script src = "main.js"></script>
