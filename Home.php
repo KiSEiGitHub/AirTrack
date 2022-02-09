@@ -1,5 +1,10 @@
 <?php
 session_start();
+
+if ($_SESSION['pseudo'] == null) {
+    header('Location: index.php');
+    exit;
+}
 // Fonction qui son importée
 require_once('./fonction/Fonction.php');
 require_once('./fonction/Insertion.php');
@@ -44,8 +49,12 @@ require_once('./fonction/Update.php');
     <img src = "assets/logo.png" alt = "logo">
     <div class = "leftSide">
         <div class = "PP"></div>
-        <p>Admin</p>
-        <a href="Deconnexion.php" style="color: blue">Deco</a>
+        <p>
+            <?php
+            echo $_SESSION['pseudo']
+            ?>
+        </p>
+        <a href = "Deconnexion.php" style = "color: blue">Deco</a>
     </div>
 
 </div>

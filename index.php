@@ -1,9 +1,18 @@
 <?php
 session_start();
+
 if(isset($_SESSION['pseudo'])){
     header('Location: Home.php');
-    exit();
+    exit;
 }
+
+require_once('./fonction/Fonction.php');
+require_once('./fonction/Insertion.php');
+require_once('./fonction/Modification.php');
+require_once('./fonction/Suppression.php');
+require_once('./fonction/Selection.php');
+require_once('./fonction/LinkFunction.php');
+require_once('./fonction/Update.php');
 ?>
 
 <!DOCTYPE html>
@@ -38,21 +47,24 @@ if(isset($_SESSION['pseudo'])){
 <div class = "CoContainer">
     <h3>Connexion</h3>
     <form action = "#" method = "post">
-        <input type = "text" name = "pseudo" placeholder = "pseudo">
-        <input type = "text" name = "mdp" placeholder = "mot de passe">
+        <input type = "text" name = "pre" placeholder = "Prénom">
+        <input type = "password" name = "mdp" placeholder = "mot de passe">
         <input type = "submit" name = "btn-co" value = "Connexion">
     </form>
     <?php
 
-    $psd = $_POST['pseudo'];
-    $mdp = $_POST['mdp'];
-
-    $_SESSION['pseudo'] = "Tom";
-    $_SESSION['mdp'] = 1234;
-
     if (isset($_POST['btn-co'])) {
-        if (!empty($_POST['pseudo']) && !empty($_POST['mdp'])) {
-            if ($psd == "Tom" && $mdp == 1234) {
+        $psd = $_POST['pre'];
+        $mdp = $_POST['mdp'];
+        if (!empty($_POST['pre']) && !empty($_POST['mdp'])) {
+            $con = connexion();
+
+            $LesAdmin = SelectionAdmin($_POST['pre']);
+
+            $_SESSION['pseudo'] = $LesAdmin['prenom'];
+            $_SESSION['password'] = $LesAdmin['pass'];
+
+            if ($psd == $_SESSION['pseudo'] && $mdp == $_SESSION['password']) {
                 header('Location: Home.php');
             } else {
                 echo "<p class='text-warning'>Mot de passe ou pseudo incorrect</p>";
