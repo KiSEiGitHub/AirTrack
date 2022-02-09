@@ -31,10 +31,10 @@
             echo "<td>" . $unpilote['email'] . "</td>";
             echo "<td>" . $unpilote['adresse'] . "</td>";
             echo "<td>";
-            echo "<a href='index.php?page=4&action=sup&idpilote=" . $unpilote['idpilote'] . "'>";
+            echo "<a href='home.php?page=4&action=sup&idpilote=" . $unpilote['idpilote'] . "'>";
             echo "<button class='btn-danger btn' style='margin-right: 5px' name='btnDelete'>Supprimer</button>";
             echo "</a>";
-            echo "<a href='index.php?page=4&action=edit&idpilote=" . $unpilote['idpilote'] . "'>";
+            echo "<a href='home.php?page=4&action=edit&idpilote=" . $unpilote['idpilote'] . "'>";
             echo "<button class='btn-primary btn'>Modifier</button>";
             echo "</a>";
             echo "</td>";

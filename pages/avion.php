@@ -28,10 +28,10 @@
             echo "<td>" . $unavion['nbplaces'] . "</td>";
             echo "<td>" . $unavion['typeavion'] . "</td>";
             echo "<td>";
-            echo "<a href='index.php?page=3&action=sup&idavion=" . $unavion['idavion'] . "'>";
+            echo "<a href='home.php?page=3&action=sup&idavion=" . $unavion['idavion'] . "'>";
             echo "<button class='btn-danger btn' style='margin-right: 5px' name='btnDelete'>Supprimer</button>";
             echo "</a>";
-            echo "<a href='index.php?page=3&action=edit&idavion=" . $unavion['idavion'] . "'>";
+            echo "<a href='home.php?page=3&action=edit&idavion=" . $unavion['idavion'] . "'>";
             echo "<button class='btn-primary btn'>Modifier</button>";
             echo "</a>";
             echo "</td>";
