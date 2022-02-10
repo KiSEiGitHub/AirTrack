@@ -198,5 +198,7 @@ td {
     color: #0e136b;
 }
 
-
-
+.searchData {
+    text-align: center;
+    margin-top: 20px;
+}

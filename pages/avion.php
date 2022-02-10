@@ -1,16 +1,23 @@
 <!-- Ici sera la page ou on affichera le tableau des avions de la bdd -->
-<h1 class = "font-regular-blue">Information / Avion</h1>
+<h1 class="font-regular-blue">Information / Avion</h1>
 
 <!-- Tout votre code doit être dans la div FrontBlock -->
 <!-- Pour chaque page crée vous un css et ajouter à la suite dans index.php -->
-<div class = "FrontBlock">
+<div class="FrontBlock">
     <!-- Coder en dessous -->
     <!-- L'icon -->
-    <div class = "IconCenter">
-        <i class = "fas fa-plane"></i>
+    <div class="IconCenter">
+        <i class="fas fa-plane"></i>
     </div>
 
-    <table class = "tableau">
+    <div class="searchData">
+        <form action="#" method="post">
+            <input type="text" name="mot" placeholder="Rechercher">
+            <input type="submit" namne="btn-sea" value="search">
+        </form>
+    </div>
+
+    <table class="tableau">
         <tr>
             <th>Marque</th>
             <th>État</th>
@@ -20,7 +27,11 @@
         </tr>
 
         <?php
-        $lesAvions = Selection("avion");
+        if(isset($_POST['btn-sea'])){
+            $lesAvions = Search($_POST['mot'], "avion", "marque", "typeavion");
+        } else {
+            $lesAvions = Selection("avion");
+        }
         foreach ($lesAvions as $unavion) {
             echo "<tr>";
             echo "<td>" . $unavion['marque'] . "</td>";

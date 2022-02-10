@@ -50,9 +50,9 @@ function selectWhere($table, $idtable, $idget)
     return $Data;
 }
 
-function Search($mot)
+function Search($mot, $table, $name1, $name2)
 {
-    $r = "select * from client where nom like '%" . $mot . "%' or prenom like '%" . $mot . "%';";
+    $r = "select * from $table where $name1 like '%" . $mot . "%' or $name2 like '%" . $mot . "%';";
     $con = connexion();
 
     if ($con) {
