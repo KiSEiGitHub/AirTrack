@@ -1,5 +1,5 @@
 <!-- Ici sera la page ou on affichera le tableau des avions de la bdd -->
-<h1 class = "font-regular-blue">Information / Avions</h1>
+<h1 class = "font-regular-blue">Information / Avion</h1>
 
 <!-- Tout votre code doit être dans la div FrontBlock -->
 <!-- Pour chaque page crée vous un css et ajouter à la suite dans index.php -->
