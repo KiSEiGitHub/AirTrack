@@ -49,3 +49,18 @@ function selectWhere($table, $idtable, $idget)
     deconnexion($con);
     return $Data;
 }
+
+function Search($mot)
+{
+    $r = "select * from client where nom like '%" . $mot . "%' or prenom like '%" . $mot . "%';";
+    $con = connexion();
+
+    if ($con) {
+        $lesClients = mysqli_query($con, $r);
+    } else {
+        return null;
+    }
+
+    deconnexion($con);
+    return $lesClients;
+}
