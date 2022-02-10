@@ -48,7 +48,10 @@ require_once('./fonction/Update.php');
 <div class = "Topbar">
     <img src = "assets/logo.png" alt = "logo">
     <div class = "leftSide">
-        <div class = "PP"></div>
+        <div class = "PP position-relative">
+            <span class="position-absolute top-1 start-100 translate-middle p-2 bg-success border border-light
+            rounded-circle"></span>
+        </div>
         <span class="badge bg-primary" style="position:relative; left: 20px">
             <?php
             echo $_SESSION['pseudo']

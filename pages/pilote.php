@@ -5,11 +5,17 @@
 <!-- Pour chaque page crée vous un css et ajouter à la suite dans index.php -->
 <div class="FrontBlock">
     <!-- Coder en dessous -->
-    <div class = "IconCenter">
-        <i class = "fas fa-user-tie"></i>
+    <div class="IconCenter">
+        <i class="fas fa-user-tie"></i>
     </div>
 
-    <table class = "tableau">
+    <div class="searchData">
+        <form action="#" method="post">
+            <input type="text" name="mot" placeholder="Rechercher">
+            <input type="submit" name="btn-sea" value="search">
+        </form>
+    </div>
+    <table class="tableau">
         <tr>
             <th>Prénom</th>
             <th>Nom</th>
@@ -21,7 +27,11 @@
         </tr>
 
         <?php
-        $lesPilotes = Selection("pilote");
+        if (isset($_POST['btn-sea'])) {
+            $lesPilotes = Search($_POST['mot'], "pilote", "prenom", "nom");
+        } else {
+            $lesPilotes = Selection("pilote");
+        }
         foreach ($lesPilotes as $unpilote) {
             echo "<tr>";
             echo "<td>" . $unpilote['prenom'] . "</td>";
@@ -41,7 +51,7 @@
             echo "</tr>";
         }
         ?>
-        </table>
+    </table>
     <?php
 
     if (isset($_GET['action']) && isset($_GET['idpilote'])) {
