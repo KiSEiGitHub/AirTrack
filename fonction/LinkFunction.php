@@ -8,7 +8,8 @@ function LinkFunction($PageNumber)
             require_once('./pages/Home.php');
             break;
         case 1:
-            // tache page
+            require_once('./pages/taches.php');
+            break;
         case 2:
             require_once('./pages/vol.php');
             break;
