@@ -32,3 +32,36 @@
         </form>
     </div>
 </div>
+
+<?php
+if (isset($_POST['btn-sub'])) {
+    if (
+        !empty($_POST['nomaeroport']) && !empty($_POST['statutaeroport']) && !empty($_POST['adresseaeroport'])
+    ) {
+
+        Insertion(
+            "aeroport",
+            "desiaero",
+            "adresse",
+            "statut",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            $_POST["nomaeroport"],
+            $_POST["adresseaeroport"],
+            $_POST["statutaeroport"],
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            3
+                );
+
+    } else {
+        echo "<p class='text-danger'>Il faut remplir tous les champs</p>";
+    }
+}
+?>
