@@ -30,6 +30,7 @@ require_once('./fonction/Update.php');
     <link rel = "stylesheet" href = "css/MainBlock.css">
     <link rel = "stylesheet" href = "css/Home.css">
     <link rel = "stylesheet" href = "css/Connexion.css">
+    <link rel = "stylesheet" href = "css/taches.css">
 
     <!-- CDN Bootstrap CSS -->
     <link href = "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel = "stylesheet"
@@ -49,7 +50,7 @@ require_once('./fonction/Update.php');
     <img src = "assets/logo.png" alt = "logo">
     <div class = "leftSide">
         <div class = "PP"></div>
-        <span class="badge bg-primary" style="position:relative; left: 20px">
+        <span class="connected" style="position:relative; left: 20px">
             <?php
             echo $_SESSION['pseudo']
             ?>
@@ -74,7 +75,6 @@ require_once('./Components/Rightbar.php');
         ?>
     </div>
 </div>
-
 
 <!--  js  -->
 <script src = "main.js"></script>
