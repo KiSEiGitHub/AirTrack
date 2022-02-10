@@ -30,6 +30,7 @@ require_once('./fonction/Update.php');
     <link rel = "stylesheet" href = "css/MainBlock.css">
     <link rel = "stylesheet" href = "css/Home.css">
     <link rel = "stylesheet" href = "css/Connexion.css">
+    <link rel="stylesheet" href="css/footer.css">
 
     <!-- CDN Bootstrap CSS -->
     <link href = "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel = "stylesheet"
@@ -78,7 +79,7 @@ require_once('./Components/Rightbar.php');
     </div>
 </div>
 
-
+<?php require_once('./Components/Footer.php')?>
 <!--  js  -->
 <script src = "main.js"></script>
 <!-- CDN Bootstrap JS -->
