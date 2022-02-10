@@ -1,5 +1,5 @@
  <div class="RightBar">
-     <h4 class="font-regular-white">Accueil</h4>
+     <h4 class="font-regular-blue-20">Accueil</h4>
      <div class="block">
          <div>
              <div class="sous-block">
@@ -12,7 +12,8 @@
              </div>
          </div>
      </div>
-     <h4 class="font-regular-white">Formulaire</h4>
+     <br>
+     <h4 class="font-regular-blue-20">Formulaire</h4>
      <div class="block">
          <div>
              <div class="sous-block">
@@ -33,7 +34,8 @@
              </div>
          </div>
      </div>
-     <h4 class="font-regular-white">Informations</h4>
+     <br>
+     <h4 class="font-regular-blue-20">Informations</h4>
      <div class="block">
          <div>
              <div class="sous-block">

@@ -23,6 +23,7 @@ require_once('./fonction/Update.php');
     <link rel = "stylesheet" href = "css/RightBar.css">
     <link rel = "stylesheet" href = "css/MainBlock.css">
     <link rel = "stylesheet" href = "css/Home.css">
+    <link rel = "stylesheet" href = "css/taches.css">
 
     <!-- CDN Bootstrap CSS -->
     <link href = "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel = "stylesheet"

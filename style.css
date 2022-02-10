@@ -17,6 +17,10 @@ body {
     z-index: 99;
 }
 
+a:hover {
+    color: #f00;
+}
+
 /* Titres des onglets et dans les pages */
 
 .font-regular-blue {
@@ -47,8 +51,9 @@ body {
 
 /*Titres des catégories du menu*/
 .font-regular-blue-20 {
-    color: #050729;
-    font-size: 20px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 /* Pour l'onglet sélectionné dans le menu*/
@@ -176,7 +181,7 @@ a {
 .tableau {
     margin: 25px auto 0;
     height: auto;
-    border-radius: 25px;
+    border-radius: 20px;
 }
 
 /* ça vise les th et les td */
@@ -192,3 +197,6 @@ td {
 .tableau tr td {
     color: #0e136b;
 }
+
+
+

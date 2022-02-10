@@ -19,6 +19,7 @@
     padding: 5px 15px;
     border-radius: 20px;
     color: #050729;
+    font-weight: bold;
 }
 
 .RightBar h4:nth-child(2) {
