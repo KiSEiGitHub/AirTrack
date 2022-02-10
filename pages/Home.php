@@ -61,20 +61,4 @@
             </tr>
         </table>
     </div>
-
-    <!-- Footer-->
-    <div class="footer">
-        <footer class="footerText">
-            <div>
-                <p>© Tom LAU, Salim ALARCON, Clara GARCIA</p>
-            </div>
-            <div class="footerIconBlock">
-                <i class="fa-brands fa-facebook footericon" href="https://www.facebook.com/cfainsta"></i>
-                <i class="fa-brands fa-instagram footericon" href="https://www.instagram.com/cfa_insta/"></i>
-                <i class="fa-brands fa-twitter footericon" href="https://twitter.com/CFAINSTA"></i>
-                <i class="fa-brands fa-linkedin footericon" href="https://www.linkedin.com/school/cfa-insta"></i>
-            </div>
-        </footer>
-    </div>
-
 </div>

@@ -30,11 +30,8 @@ require_once('./fonction/Update.php');
     <link rel="stylesheet" href="css/MainBlock.css">
     <link rel="stylesheet" href="css/Home.css">
     <link rel="stylesheet" href="css/Connexion.css">
-    <<<<<<< HEAD
     <link rel="stylesheet" href="css/footer.css">
-    =======
     <link rel="stylesheet" href="css/taches.css">
-    >>>>>>> 14289500c2369dc25af912d4cba6f4d036fe5dff
 
     <!-- CDN Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -83,10 +80,8 @@ require_once('./Components/Rightbar.php');
     </div>
 </div>
 
-<<<<<<< HEAD
 <?php require_once('./Components/Footer.php') ?>
-=======
->>>>>>> 14289500c2369dc25af912d4cba6f4d036fe5dff
+
 <!--  js  -->
 <script src="main.js"></script>
 <!-- CDN Bootstrap JS -->

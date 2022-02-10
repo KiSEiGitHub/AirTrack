@@ -1,3 +1,3 @@
 <div class="Footer">
-    <p>Footer</p>
+    <p>OK</p>
 </div>
