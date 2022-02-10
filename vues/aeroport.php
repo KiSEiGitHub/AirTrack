@@ -5,7 +5,7 @@
 <!-- Pour chaque page crée vous un css et ajouter à la suite dans index.php -->
 <div class="FrontBlock">
 
-<div class="IconCenter">
+    <div class="IconCenter">
         <i class="fas fa-map-marker-alt"></i>
     </div>
 
@@ -15,15 +15,15 @@
             <div class="parent">
                 <div>
                     <label for="nomaeroport" class="font-regular-blue-16">Nom</label>
-                    <input type="text" name="nomaeroport" placeholder="Nom de l'aéroport">
+                    <input type="text" name="nomaeroport" placeholder="Nom de l'aéroport" id="nomaeroport">
                 </div>
                 <div>
                     <label for="statutaeroport" class="font-regular-blue-16">Statut</label>
-                    <input type="text" name="statutaeroport" placeholder="Statut de l'aéroport">
+                    <input type="text" name="statutaeroport" placeholder="Statut de l'aéroport" id="statutaeroport">
                 </div>
             </div>
             <label for="adresseaeroport" class="font-regular-blue-16">Adresse</label>
-            <input type="text" name="adresseaeroport" placeholder="Adresse de l'aéroport">
+            <input type="text" name="adresseaeroport" placeholder="Adresse de l'aéroport" id="adresseaeroport">
 
             <div class="btn-group">
                 <input type="reset" name="btn-sub" value="Effacer">
@@ -32,7 +32,3 @@
         </form>
     </div>
 </div>
-
-
-
-    

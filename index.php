@@ -1,5 +1,11 @@
 <?php
-// Fonction qui sont importée
+session_start();
+
+if (isset($_SESSION['pseudo'])) {
+    header('Location: Home.php');
+    exit;
+}
+
 require_once('./fonction/Fonction.php');
 require_once('./fonction/Insertion.php');
 require_once('./fonction/Modification.php');
@@ -23,7 +29,7 @@ require_once('./fonction/Update.php');
     <link rel = "stylesheet" href = "css/RightBar.css">
     <link rel = "stylesheet" href = "css/MainBlock.css">
     <link rel = "stylesheet" href = "css/Home.css">
-    <link rel = "stylesheet" href = "css/taches.css">
+    <link rel = "stylesheet" href = "css/Connexion.css">
 
     <!-- CDN Bootstrap CSS -->
     <link href = "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel = "stylesheet"
@@ -38,26 +44,62 @@ require_once('./fonction/Update.php');
 </head>
 
 <body>
-<!-- Top bar  -->
-<?php require_once('./Components/Topbar.php') ?>
 
-<!-- Right Bar menu blue -->
-<?php require_once('./Components/Rightbar.php') ?>
+<?php
+/*
+Fonction de connexion / déconnexion
 
-<!-- Main Block -->
-<!-- Ici sera la disposition des pages -->
-<div class = "mainBlock">
-    <div class = "Sous-Main-Block">
-        <?php
-        if (isset($_GET['page'])) {
-            LinkFunction($_GET['page']);
+Explication :
+Quand on arrive sur le site, l'index.php est visé directement, c'est la première page qui charge
+Alors la fonction de connexion est faite ici.
+
+D'abord, je fais un formulaire qui prend un prénom et un mot de passe
+Ensuite, c'est là que je fais du php pour controller si les deux champs sont enregistré dans la bdd
+
+Les variables de session, c'est des variables qui vont être toujours active lors de l'utilisation du site
+Quand on appuie sur le bouton déconnexion, ça lance une fonction session_destroy qui veut littéralement dire
+Détruire la session, ensuite, ça nous renvoie directement ici, dans index.php pour se reconnecter
+
+Si je ne suis pas connecté, je n'ai pas accès à Home.php qui est notre site et si je suis connecté
+je n'ai pas accès à index.php logique
+
+J'ai récréé une fonction SelectAdmin juste pour controler si les inputs qu'on rentre dans les champs sont égaux
+à notre table admin
+
+*/
+?>
+
+<div class = "CoContainer">
+    <h3>Connexion</h3>
+    <form action = "#" method = "post">
+        <input type = "text" name = "pre" placeholder = "Prénom">
+        <input type = "password" name = "mdp" placeholder = "mot de passe">
+        <input type = "submit" name = "btn-co" value = "Connexion">
+    </form>
+    <?php
+
+    if (isset($_POST['btn-co'])) {
+        $psd = $_POST['pre'];
+        $mdp = $_POST['mdp'];
+        if (!empty($_POST['pre']) && !empty($_POST['mdp'])) {
+            $con = connexion();
+
+            $LesAdmin = SelectionAdmin($_POST['pre']);
+
+            $_SESSION['pseudo'] = $LesAdmin['prenom'];
+            $_SESSION['password'] = $LesAdmin['pass'];
+
+            if ($psd == $_SESSION['pseudo'] && $mdp == $_SESSION['password']) {
+                header('Location: Home.php');
+            } else {
+                echo "<p class='text-warning'>Mot de passe ou pseudo incorrect</p>";
+            }
         } else {
-            LinkFunction(0);
+            echo "<p class='text-danger'>Remplir tous les champs</p>";
         }
-        ?>
-    </div>
+    }
+    ?>
 </div>
-
 
 <!--  js  -->
 <script src = "main.js"></script>
