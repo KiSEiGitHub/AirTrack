@@ -30,6 +30,7 @@ require_once('./fonction/Update.php');
     <link rel = "stylesheet" href = "css/MainBlock.css">
     <link rel = "stylesheet" href = "css/Home.css">
     <link rel = "stylesheet" href = "css/Connexion.css">
+    <link rel = "stylesheet" href = "css/taches.css">
 
     <!-- CDN Bootstrap CSS -->
     <link href = "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel = "stylesheet"
@@ -67,13 +68,22 @@ J'ai récréé une fonction SelectAdmin juste pour controler si les inputs qu'on
 à notre table admin
 
 */
+
+
 ?>
+
+<div class="IconCenter">
+<i class="fa-solid fa-right-to-bracket"></i>
+</div>
+
+<br>
 
 <div class = "CoContainer">
     <h3>Connexion</h3>
+<div class="spacer"></div>
     <form action = "#" method = "post">
-        <input type = "text" name = "pre" placeholder = "Prénom">
-        <input type = "password" name = "mdp" placeholder = "mot de passe">
+        <input type = "text" name = "pre" placeholder = "Username">
+        <input type = "password" name = "mdp" placeholder = "Mot de passe">
         <input type = "submit" name = "btn-co" value = "Connexion">
     </form>
     <?php

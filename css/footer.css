@@ -1,0 +1,16 @@
+.Footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 150px;
+    background-color: #d4d4d4;
+}
+
+.Footer .frontFooter {
+    width: 600px;
+    height: 150px;
+    background-color: #ff0033;
+    margin: 0 auto;
+    position: relative;
+    left: 70px;
+}

@@ -15,6 +15,7 @@ body {
     font-family: "Poppins", sans-serif;
     position: relative;
     z-index: 99;
+    height: 190vh;
 }
 
 a:hover {
@@ -202,3 +203,4 @@ td {
     text-align: center;
     margin-top: 20px;
 }
+
