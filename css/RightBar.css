@@ -8,7 +8,7 @@
     position: fixed;
     background-color: rgb(15, 15, 48);
     margin-top: 70px;
-    padding: 20px 30px;
+    padding: 20px 23px;
     color: #fff;
     font-family: 'Poppins', sans-serif;
     z-index: 5;
@@ -16,9 +16,9 @@
 
 .isActive {
     background-color: #fff;
-    padding: 5px 15px;
+    padding: 1px 13px;
     border-radius: 20px;
-    color: #050729;
+    color: #ff0033;
     font-weight: 1000;
 }
 
@@ -44,6 +44,7 @@
 
 .RightBar .block .sous-block {
     margin-bottom: 18px;
+    display: flex;
 }
 
 .disconnect {
