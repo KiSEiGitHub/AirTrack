@@ -64,3 +64,18 @@ function Search($mot, $table, $name1, $name2)
     deconnexion($con);
     return $lesClients;
 }
+
+function SearchPlane($mot)
+{
+    $r = "select * from avion where marque like '%'" . $mot . "%'";
+    $con = connexion();
+
+    if ($con) {
+        $Data = mysqli_query($con, $r);
+    } else {
+        return null;
+    }
+
+    deconnexion($con);
+    return $Data;
+}

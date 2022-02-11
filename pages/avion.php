@@ -13,7 +13,7 @@
     <div class="searchData">
         <form action="#" method="post">
             <input type="text" name="mot" placeholder="Rechercher">
-            <input type="submit" namne="btn-sea" value="search">
+            <input type="submit" name="btn-sea" value="search">
         </form>
     </div>
 

@@ -206,6 +206,7 @@ td {
 .searchData {
     text-align: center;
     margin-top: 20px;
+    position: relative;
 }
 
 .searchData input[type='submit'] {
