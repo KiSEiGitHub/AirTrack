@@ -60,7 +60,7 @@
         if ($_GET['action'] == 'sup') {
             Suppression("aeroport", "idaeroport", $_GET['idaeroport']);
         } else if ($_GET['action'] == 'edit') {
-            require_once('./Components/EditAvion.php');
+            require_once('./Components/EditAero.php');
         }
 
     }
