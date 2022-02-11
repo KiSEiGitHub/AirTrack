@@ -2,15 +2,35 @@
     width: 100%;
     position: absolute;
     bottom: 0;
-    height: 150px;
-    background-color: #d4d4d4;
+    height: 180px;
+    background-color: #f3f3f3;
 }
 
 .Footer .frontFooter {
     width: 600px;
     height: 150px;
-    background-color: #ff0033;
+    background-color: #f3f3f3;
     margin: 0 auto;
     position: relative;
     left: 70px;
+    text-align: center;
+}
+
+.footerIcons {
+    font-size:30px;
+    margin-bottom: 20px;
+    color: #95989A;
+    margin: -18px;
+}
+
+.footerCopyright {
+    display: inline-block;
+    margin-top:60px;
+    justify-content: center;
+    color: #95989A;
+}
+
+.footerLink {
+    color: #95989A;
+
 }

@@ -33,6 +33,20 @@
         </div>
     </div>
 
+    <div class="Ecole">
+         <div class="IconCenter">
+            <i class="fa-solid fa-graduation-cap"></i>
+         </div>
+        <div class="cfainsta">
+         <p class="font-regular-blue">Le CFA INSTA</p>
+         </div>
+
+         <div class="cfalien">
+             <p>Retrouvez le site de notre école juste <a class="cfaliencolor" href="https://cfa-insta.fr/">ici</a></p>
+         </div>
+
+    </div>
+
     <!-- BLock Entrées -->
     <div class="projetBlock">
         <div class="Projettitle">

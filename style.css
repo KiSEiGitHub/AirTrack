@@ -166,7 +166,7 @@ a {
     height: 55px;
 }
 
-/* Cette classe permet d'aligner le deux boutons sur la même ligne */
+/* Cette classe permet d'aligner les deux boutons sur la même ligne */
 .btn-group {
     display: flex;
     width: 100%;
@@ -204,3 +204,22 @@ td {
     margin-top: 20px;
 }
 
+.Ecole {
+    width: 400px;
+    height: 500px;
+    margin-left: 870px;
+    border: 2px solid #d4d4d4;
+    border-radius: 20px;
+    text-align: center;
+    position: absolute;
+    top : 55px;
+
+}
+
+.cfainsta{
+    margin-top: 25px;
+}
+
+.cfaliencolor {
+    color: #050729;
+}
