@@ -101,7 +101,7 @@ J'ai récréé une fonction SelectAdmin juste pour controler si les inputs qu'on
             $_SESSION['rolee'] = $LesAdmin['role'];
 
             if ($psd == $_SESSION['pseudo'] && $mdp == $_SESSION['password']) {
-                header('Location: Home.php');
+                header('Location: Home.php?page=0');
             } else {
                 echo "<p class='text-warning'>Mot de passe ou pseudo incorrect</p>";
             }

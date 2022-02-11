@@ -119,6 +119,7 @@ a {
     background-color: #ececec;
     padding: 10px 15px; /* 10 haut / bas | 15 droite / gauche */
     width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px, rgba(0, 0, 0, 0.3) 0 7px 13px -3px, rgba(0, 0, 0, 0.2) 0 -3px 0 inset;
 }
 
 /* Pour avoir deux input sur la même ligne conforme à la maquette vous devez UTILISER cette class dans une div */
@@ -142,6 +143,7 @@ a {
     margin-right: 15px;
     background-color: #f00;
     color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 /* ça vise UNIQUEMENT les inputs de type reset */
@@ -151,6 +153,7 @@ a {
     border: 1px solid #f00;
     background-color: #fff;
     color: #f03;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 /* Vue qu'on aura des <select> à faire ici sera le global style pour eux */
@@ -164,6 +167,7 @@ a {
     border-radius: 25px;
     padding: 10px 15px;
     height: 55px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 /* Cette classe permet d'aligner les deux boutons sur la même ligne */
@@ -202,6 +206,24 @@ td {
 .searchData {
     text-align: center;
     margin-top: 20px;
+    position: relative;
+}
+
+.searchData input[type='submit'] {
+    outline: none;
+    border: 2px solid #ff0033;
+    border-radius: 20px;
+    color: #ffffff;
+    padding: 10px 25px;
+    background-color: #ff0000;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.searchData input[type='text'] {
+    border-radius: 20px;
+    outline: none;
+    border: 2px solid #050729;
+    padding: 10px 25px;
 }
 
 .Ecole {
@@ -212,16 +234,19 @@ td {
     border-radius: 20px;
     text-align: center;
     position: absolute;
-    top : 55px;
+    top: 55px;
 
 }
 
-.cfainsta{
+.cfainsta {
     margin-top: 25px;
 }
 
 .cfaliencolor {
-    color: #050729;
+    color: #dc1818;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
 }
 
 ::-webkit-scrollbar {

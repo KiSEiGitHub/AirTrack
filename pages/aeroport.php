@@ -43,10 +43,10 @@
             if ($_SESSION['rolee'] == 'admin') {
                 echo "<td>";
                 echo "<a href='home.php?page=5&action=sup&idaeroport=" . $unaeroport['idaeroport'] . "'>";
-                echo "<button class='btn-danger btn' style='margin-right: 5px' name='btnDelete'>Supprimer</button>";
+                echo "<button class='btn-danger btn' style='margin-right: 5px' name='btnDelete'><i class='fa-solid fa-trash-can'></i></button>";
                 echo "</a>";
                 echo "<a href='home.php?page=5&action=edit&idaeroport=" . $unaeroport['idaeroport'] . "'>";
-                echo "<button class='btn-primary btn'>Modifier</button>";
+                echo "<button class='btn-primary btn'><i class='fa-solid fa-pen-to-square'></i></button>";
                 echo "</a>";
                 echo "</td>";
             }
@@ -60,7 +60,7 @@
         if ($_GET['action'] == 'sup') {
             Suppression("aeroport", "idaeroport", $_GET['idaeroport']);
         } else if ($_GET['action'] == 'edit') {
-            require_once('./Components/EditAvion.php');
+            require_once('./Components/EditAero.php');
         }
 
     }

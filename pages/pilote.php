@@ -47,10 +47,10 @@
             if ($_SESSION['rolee'] == 'admin') {
                 echo "<td>";
                 echo "<a href='home.php?page=4&action=sup&idpilote=" . $unpilote['idpilote'] . "'>";
-                echo "<button class='btn-danger btn' style='margin-right: 5px' name='btnDelete'>Supprimer</button>";
+                echo "<button class='btn-danger btn' style='margin-right: 5px' name='btnDelete'><i class='fa-solid fa-trash-can'></i></button>";
                 echo "</a>";
                 echo "<a href='home.php?page=4&action=edit&idpilote=" . $unpilote['idpilote'] . "'>";
-                echo "<button class='btn-primary btn'>Modifier</button>";
+                echo "<button class='btn-primary btn'><i class='fa-solid fa-pen-to-square'></i></button>";
                 echo "</a>";
                 echo "</td>";
             }
