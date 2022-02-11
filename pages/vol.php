@@ -26,11 +26,15 @@
             <th>Aéroport d'arrivé</th>
             <th>Pilote N°1</th>
             <th>Pilote N°2</th>
-            <th>Opération</th>
+            <?php
+            if ($_SESSION['rolee'] == 'admin') {
+                ?>
+                <th>Opération</th>
+            <?php } ?>
         </tr>
         <!-- Ici c'est en attendant mais faudra remplacer par le php -->
         <?php
-        if(isset($_POST['btn-sea'])){
+        if (isset($_POST['btn-sea'])) {
             $lesVols = Search($_POST['mot'], "vol", "desivol", "duree");
         } else {
             $lesVols = Selection("vol");
@@ -45,14 +49,16 @@
             echo "<td>" . $unvol['idaeroport2'] . "</td>";
             echo "<td>" . $unvol['idpilote1'] . "</td>";
             echo "<td>" . $unvol['idpilote2'] . "</td>";
-            echo "<td>";
-            echo "<a href='home.php?page=2&action=sup&idvol=" . $unvol['idvol'] . "'>";
-            echo "<button class='btn-danger btn' style='margin-right: 5px' name='btnDelete'>Supprimer</button>";
-            echo "</a>";
-            echo "<a href='home.php?page=2&action=edit&idvol=" . $unvol['idvol'] . "'>";
-            echo "<button class='btn-primary btn'>Modifier</button>";
-            echo "</a>";
-            echo "</td>";
+            if ($_SESSION['rolee'] == 'admin') {
+                echo "<td>";
+                echo "<a href='home.php?page=2&action=sup&idvol=" . $unvol['idvol'] . "'>";
+                echo "<button class='btn-danger btn' style='margin-right: 5px' name='btnDelete'>Supprimer</button>";
+                echo "</a>";
+                echo "<a href='home.php?page=2&action=edit&idvol=" . $unvol['idvol'] . "'>";
+                echo "<button class='btn-primary btn'>Modifier</button>";
+                echo "</a>";
+                echo "</td>";
+            }
             echo "</tr>";
         }
         ?>

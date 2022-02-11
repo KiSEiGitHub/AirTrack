@@ -61,9 +61,14 @@ require_once('./fonction/Update.php');
                 }
             ?>
         </div>
-        <span class="badge bg-primary" style="position:relative; left: 20px">
+        <span class="badge bg-primary" style="position:relative; left: 20px; top: -12px">
             <?php
             echo $_SESSION['pseudo']
+            ?>
+        </span>
+        <span class="badge bg-danger" style="position:relative; left: -20px; top: 12px">
+            <?php
+                echo $_SESSION['rolee']
             ?>
         </span>
     </div>
