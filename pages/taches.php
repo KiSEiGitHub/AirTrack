@@ -6,6 +6,10 @@
 <div class="FrontBlock">
 
     <!-- Coder en dessous -->
+    <div class="IconCenter">
+        <i class="fa-solid fa-list-check"></i>
+    </div>
+
 
     <table class="tableau">
         <tr>
@@ -13,43 +17,40 @@
             <th>Tom</th>
             <th>Salim</th>
         </tr>
-        <tr>
-            <td>✔ Logo</td>
-            <td>✔ Tableau de bord</td>
-            <td>✔ Base de données</td>
-        </tr>
 
-        <tr>
-            <td>✔ Maquette</td>
-            <td>✔ Menu</td>
-            <td>✔ Page Formulaires/Aéroport</td>
-        </tr>
+            <td style="text-align:left">✔ Logo <br>
+            ✔ Maquette Adobe XD<br>
+            ✔ CSS Global<br>
+            ✔ Page Formulaires/Avion<br>
+            ✔ Page Informations/Avion<br>
+            ✔ Fonction insertion de la page Avion<br>
+            ✔ Fonction insertion de la page Aéroport<br>
+            ✔ Footer</td>
 
-        <tr>
-            <td>✔ CSS Global</td>
-            <td>✔ Page Formulaires/Vol</td>
-            <td>✔ Page Informations/Aéroport</td>
-        </tr>
 
-        <tr>
-            <td>✔ Page Formulaires/Avion</td>
-            <td>✔ Page Informations/Vol</td>
-            <td>✔ Page Formulaires/Pilote</td>
-        </tr>
 
-        <tr>
-            <td>✔ Page Informations/Avion</td>
-            <td>✔ Page Informations/Avion</td>
-            <td>✔ Page Informations/Pilote</td>
-        </tr>
+            <td style="text-align:left">✔ Tableau de bord<br>
+            ✔ Menu<br>
+            ✔ Page Formulaires/Vol<br>
+            ✔ Page Informations/Vol<br>
+            ✔ Page Informations/Avion<br>
+            ✔ Page Informations/Avion<br>
+            ✔ Fonction insertion des pages<br>
+            ✔ Sélection des aéroports pour le formulaire Vol<br>
+            ✔ Sélection des pilotes pour le formulaire Vol<br>
+            ✔ Page Connexion</td>
 
-        <tr>
-            <td>✔ Fonction insertion de la page Avion et Aéroport</td>
-            <td>✔ Fonctions Ajouter/Lister/Supprimer/Modifier</td>
-            <td>✔ MCD/MLDR</td>
-        </tr>
+
+
+
+        <td style="text-align:left">✔ Base de données<br>
+        ✔ Page Formulaires/Aéroport<br>
+        ✔ Page Informations/Aéroport<br>
+        ✔ Page Formulaires/Pilote<br>
+        ✔ Page Informations/Pilote<br>
+        ✔ MCD/MLDR</td>
+
 
     </table>
-
 
 
