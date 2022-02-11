@@ -223,3 +223,7 @@ td {
 .cfaliencolor {
     color: #050729;
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
