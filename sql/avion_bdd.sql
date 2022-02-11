@@ -32,6 +32,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
   `idadmin` int(3) NOT NULL AUTO_INCREMENT,
   `prenom` varchar(60) NOT NULL,
   `pass` varchar(60) NOT NULL,
+  `role` varchar(60) not null,
   PRIMARY KEY (`idadmin`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
@@ -39,10 +40,12 @@ CREATE TABLE IF NOT EXISTS `admin` (
 -- Déchargement des données de la table `admin`
 --
 
-INSERT INTO `admin` (`idadmin`, `prenom`, `pass`) VALUES
-(2, 'Tom', '1234'),
-(1, 'Salim', '5678'),
-(3, 'Clara', 'azerty');
+INSERT INTO `admin` (`idadmin`, `prenom`, `pass`, `role`) VALUES
+(2, 'Tom', '1234', 'admin'),
+(1, 'Salim', '5678', 'admin'),
+(3, 'Clara', 'azerty', 'admin'),
+(4, 'Dan', 'okok', 'user'),
+(5, 'Maz', 'okok', 'user');
 
 -- --------------------------------------------------------
 

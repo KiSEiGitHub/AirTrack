@@ -98,6 +98,7 @@ J'ai récréé une fonction SelectAdmin juste pour controler si les inputs qu'on
 
             $_SESSION['pseudo'] = $LesAdmin['prenom'];
             $_SESSION['password'] = $LesAdmin['pass'];
+            $_SESSION['rolee'] = $LesAdmin['role'];
 
             if ($psd == $_SESSION['pseudo'] && $mdp == $_SESSION['password']) {
                 header('Location: Home.php');

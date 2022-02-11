@@ -22,13 +22,17 @@
             <th>Nom</th>
             <th>Statut</th>
             <th>Adresse</th>
-            <th>Opération</th>
+            <?php
+            if ($_SESSION['rolee'] == 'admin') {
+                ?>
+                <th>Opération</th>
+            <?php } ?>
         </tr>
 
         <?php
-        if(isset($_POST['btn-sea'])){
+        if (isset($_POST['btn-sea'])) {
             $lesAeroports = Search($_POST['mot'], "aeroport", "desiaero", "statut");
-        } else  {
+        } else {
             $lesAeroports = Selection("aeroport");
         }
         foreach ($lesAeroports as $unaeroport) {
@@ -36,14 +40,16 @@
             echo "<td>" . $unaeroport['desiaero'] . "</td>";
             echo "<td>" . $unaeroport['adresse'] . "</td>";
             echo "<td>" . $unaeroport['statut'] . "</td>";
-            echo "<td>";
-            echo "<a href='home.php?page=5&action=sup&idaeroport=" . $unaeroport['idaeroport'] . "'>";
-            echo "<button class='btn-danger btn' style='margin-right: 5px' name='btnDelete'>Supprimer</button>";
-            echo "</a>";
-            echo "<a href='home.php?page=5&action=edit&idaeroport=" . $unaeroport['idaeroport'] . "'>";
-            echo "<button class='btn-primary btn'>Modifier</button>";
-            echo "</a>";
-            echo "</td>";
+            if ($_SESSION['rolee'] == 'admin') {
+                echo "<td>";
+                echo "<a href='home.php?page=5&action=sup&idaeroport=" . $unaeroport['idaeroport'] . "'>";
+                echo "<button class='btn-danger btn' style='margin-right: 5px' name='btnDelete'>Supprimer</button>";
+                echo "</a>";
+                echo "<a href='home.php?page=5&action=edit&idaeroport=" . $unaeroport['idaeroport'] . "'>";
+                echo "<button class='btn-primary btn'>Modifier</button>";
+                echo "</a>";
+                echo "</td>";
+            }
             echo "</tr>";
         }
         ?>

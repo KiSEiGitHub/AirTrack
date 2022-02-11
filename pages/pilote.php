@@ -23,7 +23,11 @@
             <th>Grade</th>
             <th>Email</th>
             <th>Adresse</th>
-            <th>Opération</th>
+            <?php
+            if ($_SESSION['rolee'] == 'admin') {
+                ?>
+                <th>Opération</th>
+            <?php } ?>
         </tr>
 
         <?php
@@ -40,14 +44,16 @@
             echo "<td>" . $unpilote['grade'] . "</td>";
             echo "<td>" . $unpilote['email'] . "</td>";
             echo "<td>" . $unpilote['adresse'] . "</td>";
-            echo "<td>";
-            echo "<a href='home.php?page=4&action=sup&idpilote=" . $unpilote['idpilote'] . "'>";
-            echo "<button class='btn-danger btn' style='margin-right: 5px' name='btnDelete'>Supprimer</button>";
-            echo "</a>";
-            echo "<a href='home.php?page=4&action=edit&idpilote=" . $unpilote['idpilote'] . "'>";
-            echo "<button class='btn-primary btn'>Modifier</button>";
-            echo "</a>";
-            echo "</td>";
+            if ($_SESSION['rolee'] == 'admin') {
+                echo "<td>";
+                echo "<a href='home.php?page=4&action=sup&idpilote=" . $unpilote['idpilote'] . "'>";
+                echo "<button class='btn-danger btn' style='margin-right: 5px' name='btnDelete'>Supprimer</button>";
+                echo "</a>";
+                echo "<a href='home.php?page=4&action=edit&idpilote=" . $unpilote['idpilote'] . "'>";
+                echo "<button class='btn-primary btn'>Modifier</button>";
+                echo "</a>";
+                echo "</td>";
+            }
             echo "</tr>";
         }
         ?>
