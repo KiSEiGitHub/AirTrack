@@ -1,6 +1,7 @@
 <?php $UnAero = selectWhere("aeroport", "idaeroport", $_GET['idaeroport']); ?>
 
 <div class = "Formulaire">
+    <?php echo "<h3>Modification l'aéroport " . $UnAero['desiaero'] . "</h3>" ?>
     <form action = "#" method = "POST">
         <div class = "parent">
             <div>
