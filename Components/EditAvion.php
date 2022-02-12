@@ -1,6 +1,7 @@
 <?php $unAvion = selectWhere("avion", "idavion", $_GET['idavion']); ?>
 
 <div class = "Formulaire">
+    <?php echo "<h3>Modification de l'avion " . $unAvion['marque'] . "</h3>" ?>
     <form action = "#" method = "POST">
 
         <div class = "parent">
