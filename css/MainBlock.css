@@ -1,0 +1,13 @@
+.mainBlock {
+    width: 100%;
+    height: 150vh;
+    position: absolute;
+    top: 70px;
+    z-index: -2;
+    text-indent: 19em;
+    padding: 40px;
+}
+
+.mainBlock .Sous-Main-Block {
+    position: relative;
+}

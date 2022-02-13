@@ -1,0 +1,254 @@
+/* Global reset CSS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Police */
+body {
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    z-index: 99;
+    height: 190vh;
+}
+
+a:hover {
+    color: #f00;
+}
+
+/* Titres des onglets et dans les pages */
+
+.font-regular-blue {
+    color: #050729;
+    font-size: 24px;
+}
+
+.font-regular-red {
+    color: #f00;
+    font-size: 24px;
+}
+
+.font-regular-white {
+    color: white;
+    font-size: 18px;
+}
+
+.font-regular-grey {
+    color: #bbbbbb;
+    font-size: 24px;
+}
+
+/*Titres en haut des pages*/
+.font-regular-blue-28 {
+    color: #050729;
+    font-size: 28px;
+}
+
+/*Titres des catégories du menu*/
+.font-regular-blue-20 {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* Pour l'onglet sélectionné dans le menu*/
+.font-semibold-blue {
+    color: #050729;
+    font-weight: 600;
+}
+
+/*Texte dans "Projet" sur la page d'accueil*/
+.font-regular-blue-16 {
+    color: #050729;
+    font-size: 16px;
+}
+
+/* Reset CSS pour les balises a (balise de lien) */
+a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+}
+
+/* Pour toutes les pages formulaire le style pour l'icone */
+/* Pour utiliser cette class aller voir le fichier qui se trouve ici --> ./vues/vol.php */
+.IconCenter i {
+    margin-top: 25px;
+    display: block;
+    text-align: center;
+    font-size: 120px;
+    color: #050729;
+}
+
+/* Vue que tous les formulaire c'est le même style, je l'ajoute en tant que style global */
+/* Ici le style global de tous les formulaire */
+/* Voir utilisation dans vues/vol.php */
+/* Tout les formulaires doit avoit une div avec cette classe */
+.Formulaire {
+    border-radius: 20px;
+    width: 80%;
+    height: auto;
+    border: 1px solid #bbbbbb;
+    margin: 25px auto 0;
+    padding: 40px;
+    position: relative;
+}
+
+/* Cette classe signifie la petite * en rouge après le label */
+/* ::after c'est une pseudo class qui a pour but de r'ajouter du contenu sans r'ajouter du contenu au DOM */
+/* Donc juste mettez le label et y'aura automatiquement la petit étoile en rouge */
+.Formulaire label::after {
+    content: "*";
+    color: #f00;
+}
+
+/* cette class correspecond au style d'un input vous avez aucun style a faire, juste ajouter un input */
+.Formulaire input {
+    margin: 10px 0 25px; /* 10 en haut 0 droite et gauche 25 en bas */
+    display: block;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    height: 55px;
+    background-color: #ececec;
+    padding: 10px 15px; /* 10 haut / bas | 15 droite / gauche */
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px, rgba(0, 0, 0, 0.3) 0 7px 13px -3px, rgba(0, 0, 0, 0.2) 0 -3px 0 inset;
+}
+
+/* Pour avoir deux input sur la même ligne conforme à la maquette vous devez UTILISER cette class dans une div */
+/* Sauf que vous A TOUT PRIS mettre un parent (une div) sur les deux labels */
+/* Genre comme ça -> https://i.imgur.com/v0A6927.png */
+/* Sinon, même vos label seront des flex item et c'est pas ce qu'on veut */
+.Formulaire .parent {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    width: 100%;
+}
+
+.parent > div {
+    width: 100%;
+}
+
+/* ça vise UNIQUEMENT les inputs de type submit */
+.Formulaire .btn-group input[type="submit"] {
+    width: 150px;
+    margin-right: 15px;
+    background-color: #f00;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+/* ça vise UNIQUEMENT les inputs de type reset */
+.Formulaire .btn-group input[type="reset"] {
+    width: 150px !important;
+    margin-right: 15px;
+    border: 1px solid #f00;
+    background-color: #fff;
+    color: #f03;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+/* Vue qu'on aura des <select> à faire ici sera le global style pour eux */
+.Formulaire select {
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    display: block;
+    width: 100%;
+    background-color: #ececec;
+    border-radius: 25px;
+    padding: 10px 15px;
+    height: 55px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+/* Cette classe permet d'aligner les deux boutons sur la même ligne */
+.btn-group {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    margin-top: 25px;
+    justify-content: flex-end;
+}
+
+/* Vue que tous les tableaux sont les mêmes alors je fais le style global pour tous  */
+/* Exemple d'utilisation dans ./pages/vol.php */
+/* Vous devez bien respecter cette structure  */
+/* Cet à dire entourer les th d'un tr et les td d'un tr */
+.tableau {
+    margin: 25px auto 0;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* ça vise les th et les td */
+.tableau tr th,
+td {
+    border: 1px solid #bbbbbb;
+    border-top-left-radius: 25px;
+    color: #050729;
+    padding: 15px;
+    text-align: center;
+}
+
+.tableau tr td {
+    color: #0e136b;
+}
+
+.searchData {
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+.searchData input[type='submit'] {
+    outline: none;
+    border: 2px solid #ff0033;
+    border-radius: 20px;
+    color: #ffffff;
+    padding: 10px 25px;
+    background-color: #ff0000;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.searchData input[type='text'] {
+    border-radius: 20px;
+    outline: none;
+    border: 2px solid #050729;
+    padding: 10px 25px;
+}
+
+.Ecole {
+    width: 400px;
+    height: 500px;
+    margin-left: 870px;
+    border: 2px solid #d4d4d4;
+    border-radius: 20px;
+    text-align: center;
+    position: absolute;
+    top: 55px;
+
+}
+
+.cfainsta {
+    margin-top: 25px;
+}
+
+.cfaliencolor {
+    color: #dc1818;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

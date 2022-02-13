@@ -1,0 +1,41 @@
+.Container-tache {
+    display: flex;
+    justify-content: center;
+    width: 1100px;
+    height: 550px;
+    margin: 20px auto;
+}
+
+.Container-tache h4 {
+    text-align: center;
+    color: #050729;
+}
+
+.Container-tache .T-Tom {
+    height: 550px;
+    border: 1px solid #bbbbbb;
+    border-radius: 20px;
+    width: 100%;
+    padding: 20px;
+    color: #22256c;
+    margin-left: 10px;
+}
+
+.Container-tache .T-Salim {
+    height: 550px;
+    border: 1px solid #bbbbbb;
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    color: #22256c;
+    margin-left: 10px;
+}
+
+.Container-tache .T-Clara {
+    width: 100%;
+    border: 1px solid #bbbbbb;
+    padding: 20px;
+    border-radius: 20px;
+    color: #22256c;
+    margin-left: 10px;
+}

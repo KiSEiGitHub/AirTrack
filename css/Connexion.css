@@ -1,0 +1,33 @@
+.CoContainer {
+    height: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.CoContainer input {
+    border-radius: 20px;
+    padding: 5px 20px;
+    border: none;
+    outline: none;
+    background-color: #eeeeee;
+    display: block;
+    margin: 15px auto;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    width: 400px;
+}
+
+.IconCenter {
+        margin-top: 100px;
+        display: block;
+        text-align: center;
+        font-size: 120px;
+        color: #050729;
+}
+
+.CoContainer input[type="submit"] {
+    width: 150px;
+    margin: 0 auto;
+    height: 70px;
+    background-color: #f00;
+    color: #fff;
+}

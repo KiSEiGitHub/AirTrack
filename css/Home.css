@@ -1,0 +1,81 @@
+.FrontBlock {
+    width: 80%;
+    height: 85vh;
+    position: absolute;
+    top: 30px;
+    left: 300px;
+    text-indent: 3px;
+
+    
+}
+
+.projetBlock {
+    margin-top: 55px;
+    width: 800px;
+    height: 500px;
+    border: 2px solid #d4d4d4;
+    border-radius: 20px;
+}
+
+.Projettitle {
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+    height: 75px;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+
+.ProjetPara {
+    padding: 10px 20px;
+}
+
+.homeTab {
+    width: 100%;
+}
+
+.homeTab th, .homeTab td {
+    border: 1px solid #d4d4d4;
+    text-align: center;
+    padding: 20px;
+}
+
+.connected {
+    color: white;
+    background-color: #ff0000;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.BlockIcon {
+    width: 150px;
+    
+}
+
+.test {
+    font-size:100px;
+    color: #050729;
+    padding: 20px;
+}
+
+.footer {
+    background: #0998;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.footerText {
+    display: block;
+}
+
+.footericon {
+    font-size: 30px;
+    justify-content: center;
+}
+
+.footerIconBlock {
+    display: block;
+}
