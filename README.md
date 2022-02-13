@@ -1,6 +1,6 @@
 # Projet PPE
 
-## Thème : Avions
+## Thème : `Gestion des pilotes d'air France`
 
 ### Cahier des charges :
 
