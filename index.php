@@ -72,15 +72,15 @@ J'ai récréé une fonction SelectAdmin juste pour controler si les inputs qu'on
 
 ?>
 
-<div class="IconCenter">
-<i class="fa-solid fa-right-to-bracket"></i>
+<div class = "IconCenter">
+    <i class = "fa-solid fa-right-to-bracket"></i>
 </div>
 
 <br>
 
 <div class = "CoContainer">
     <h3>Connexion</h3>
-<div class="spacer"></div>
+    <div class = "spacer"></div>
     <form action = "#" method = "post">
         <input type = "text" name = "pre" placeholder = "Username">
         <input type = "password" name = "mdp" placeholder = "Mot de passe">
