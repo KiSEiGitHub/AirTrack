@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 09 fév. 2022 à 16:13
+-- Généré le : lun. 14 fév. 2022 à 20:04
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -32,9 +32,9 @@ CREATE TABLE IF NOT EXISTS `admin` (
   `idadmin` int(3) NOT NULL AUTO_INCREMENT,
   `prenom` varchar(60) NOT NULL,
   `pass` varchar(60) NOT NULL,
-  `role` varchar(60) not null,
+  `role` varchar(60) NOT NULL,
   PRIMARY KEY (`idadmin`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `admin`
@@ -60,7 +60,16 @@ CREATE TABLE IF NOT EXISTS `aeroport` (
   `adresse` varchar(50) NOT NULL,
   `statut` varchar(20) NOT NULL,
   PRIMARY KEY (`idaeroport`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `aeroport`
+--
+
+INSERT INTO `aeroport` (`idaeroport`, `desiaero`, `adresse`, `statut`) VALUES
+(10, 'Orly', 'France', 'âœ”ï¸'),
+(11, 'PÃ©kin-Capitale', 'Chine', 'âœ”ï¸'),
+(12, 'AÃ©roport international de Dubai', 'Dubai', 'âœ”ï¸');
 
 -- --------------------------------------------------------
 
@@ -76,15 +85,18 @@ CREATE TABLE IF NOT EXISTS `avion` (
   `nbplaces` int(3) NOT NULL,
   `typeavion` varchar(50) NOT NULL,
   PRIMARY KEY (`idavion`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `avion`
 --
 
 INSERT INTO `avion` (`idavion`, `marque`, `etat`, `nbplaces`, `typeavion`) VALUES
-(2, 'BRA2', 'Neuf', 25425, 'MarchandZR'),
-(3, 'FAZ2', 'Neuf', 23625, 'Marchand');
+(7, 'FRB476', 'Neuf', 8282, 'Voyage'),
+(8, 'CHB271', 'Neuf', 9281, 'Voyage'),
+(9, 'Rafale', 'Neuf', 2, 'Guerre'),
+(10, 'Mirage', 'Neuf', 2, 'Guerre'),
+(11, 'C-130 HERCULES', 'Neuf', 680, 'Porteur');
 
 -- --------------------------------------------------------
 
@@ -102,16 +114,16 @@ CREATE TABLE IF NOT EXISTS `pilote` (
   `adresse` varchar(50) NOT NULL,
   `grade` varchar(50) NOT NULL,
   PRIMARY KEY (`idpilote`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `pilote`
 --
 
 INSERT INTO `pilote` (`idpilote`, `nom`, `prenom`, `age`, `email`, `adresse`, `grade`) VALUES
-(6, 'Alarcon', 'Salim', '18', 'S@gmail.com', 'SDF', 'Pro'),
-(8, 'Garcia', 'Clara', '23', 'C@gmail.com', 'SDF 2', 'Pro'),
-(5, 'LAU', 'Tom', '21', 'T@gmail.com', 'a la rue', 'Pro');
+(15, 'Alarcon', 'Salim', '18', 'S@gmail.com', 'France', 'Pro'),
+(13, 'LAU', 'Tom', '21', 'T@gmail.com', 'France', 'Pro'),
+(14, 'Garcia', 'Clara', '23', 'C@gmail.com', 'France', 'Pro');
 
 -- --------------------------------------------------------
 
@@ -136,14 +148,15 @@ CREATE TABLE IF NOT EXISTS `vol` (
   KEY `idpilote1` (`idpilote1`),
   KEY `idpilote2` (`idpilote2`),
   KEY `idavion` (`idavion`)
-) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `vol`
 --
 
 INSERT INTO `vol` (`idvol`, `desivol`, `duree`, `datevole`, `idavion`, `idaeroport1`, `idaeroport2`, `idpilote1`, `idpilote2`) VALUES
-(18, 'F252', '25202', '1992-02-20', 3, 2, 5, 6, 5);
+(27, 'DBCH282', '28192', '2021-11-19', 10, 12, 10, 15, 13),
+(26, 'CHFR281', '2829', '2017-09-20', 7, 10, 11, 15, 13);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
