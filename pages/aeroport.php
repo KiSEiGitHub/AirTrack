@@ -38,8 +38,8 @@
         foreach ($lesAeroports as $unaeroport) {
             echo "<tr>";
             echo "<td>" . $unaeroport['desiaero'] . "</td>";
-            echo "<td>" . $unaeroport['adresse'] . "</td>";
             echo "<td>" . $unaeroport['statut'] . "</td>";
+            echo "<td>" . $unaeroport['adresse'] . "</td>";
             if ($_SESSION['rolee'] == 'admin') {
                 echo "<td>";
                 echo "<a href='./Suppression.php?idaeroport=" . $unaeroport['idaeroport'] . "'>";
