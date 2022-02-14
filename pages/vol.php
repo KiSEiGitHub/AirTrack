@@ -1,22 +1,22 @@
 <!-- Ici sera la page ou on affichera le tableau des vol de la bdd -->
-<h1 class="font-regular-blue">Information / Vol</h1>
+<h1 class = "font-regular-blue">Information / Vol</h1>
 
 <!-- Tout votre code doit être dans la div FrontBlock -->
 <!-- Pour chaque page crée vous un css et ajouter à la suite dans index.php -->
-<div class="FrontBlock">
+<div class = "FrontBlock">
     <!-- Coder en dessous -->
-    <div class="IconCenter">
-        <i class="fas fa-plane-departure"></i>
+    <div class = "IconCenter">
+        <i class = "fas fa-plane-departure"></i>
     </div>
 
-    <div class="searchData">
-        <form action="#" method="post">
-            <input type="text" name="mot" placeholder="Rechercher">
-            <input type="submit" name="btn-sea" value="search">
+    <div class = "searchData">
+        <form action = "#" method = "post">
+            <input type = "text" name = "mot" placeholder = "Rechercher">
+            <input type = "submit" name = "btn-sea" value = "search">
         </form>
     </div>
 
-    <table class="tableau">
+    <table class = "tableau">
         <tr>
             <th>N° de vol</th>
             <th>Durée</th>
@@ -51,10 +51,10 @@
             echo "<td>" . $unvol['idpilote2'] . "</td>";
             if ($_SESSION['rolee'] == 'admin') {
                 echo "<td>";
-                echo "<a href='./Suppression.php?idvol=". $unvol['idvol']. "'>";
+                echo "<a href='./Suppression.php?idvol=" . $unvol['idvol'] . "'>";
                 echo "<button class='btn-danger btn' style='margin-right: 5px' name='btnDelete'><i class='fa-solid fa-trash-can'></i></button>";
                 echo "</a>";
-                echo "<a href='home.php?page=2&action=edit&idvol=" . $unvol['idvol'] . "'>";
+                echo "<a href='./EditVol.php?idvol=" . $unvol['idvol'] . "'>";
                 echo "<button class='btn-primary btn'><i class='fa-solid fa-pen-to-square'></i></button>";
                 echo "</a>";
                 echo "</td>";
@@ -66,12 +66,9 @@
     <?php
 
     if (isset($_GET['action']) && isset($_GET['idvol'])) {
-        if ($_GET['action'] == 'sup') {
-            Suppression("vol", "idvol", $_GET['idvol']);
-        } else if ($_GET['action'] == 'edit') {
+        if ($_GET['action'] == 'edit') {
             require_once('./Components/EditVol.php');
         }
-
     }
     ?>
 

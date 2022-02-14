@@ -49,7 +49,7 @@
                 echo "<a href='./Suppression.php?idpilote=". $unpilote['idpilote']. "'>";
                 echo "<button class='btn-danger btn' style='margin-right: 5px' name='btnDelete'><i class='fa-solid fa-trash-can'></i></button>";
                 echo "</a>";
-                echo "<a href='home.php?page=4&action=edit&idpilote=" . $unpilote['idpilote'] . "'>";
+                echo "<a href='./EditPilote.php?idpilote=" . $unpilote['idpilote'] . "'>";
                 echo "<button class='btn-primary btn'><i class='fa-solid fa-pen-to-square'></i></button>";
                 echo "</a>";
                 echo "</td>";

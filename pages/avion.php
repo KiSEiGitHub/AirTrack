@@ -47,7 +47,7 @@
                 echo "<a href='./Suppression.php?idavion=". $unavion['idavion']. "'>";
                 echo "<button class='btn-danger btn' style='margin-right: 5px' name='btnDelete'><i class='fa-solid fa-trash-can'></i></button>";
                 echo "</a>";
-                echo "<a href='home.php?page=3&action=edit&idavion=" . $unavion['idavion'] . "'>";
+                echo "<a href='./EditAvion.php?idavion=" . $unavion['idavion'] . "'>";
                 echo "<button class='btn-primary btn'><i class='fa-solid fa-pen-to-square'></i></button>";
                 echo "</a>";
                 echo "</td>";
