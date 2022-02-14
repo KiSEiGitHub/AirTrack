@@ -46,21 +46,47 @@ $UnVol = selectWhere("vol", "idvol", $_GET['idvol']);
                 </select>
             </div>
         </div>
-        <div class = "parent">
+        <div class = "parent" style = "margin-bottom: 25px">
             <div>
                 <label for = "aerodepart" class = "font-regular-blue-16">Aéroport de départ</label>
-                <input type = "number" name = "aerodepart" value = <?php echo $UnVol['idaeroport1'] ?>>
+                <select name = "aerodepart" id = "aerodepart">
+                    <option value = <?php echo $UnVol['idaeroport1'] ?>>
+                        <?php echo $UnVol['idaeroport1'] ?>
+                    </option>
+                    <?php
+                    $LesAero = Selection('aeroport');
+                    foreach ($LesAero as $UnAero) {
+                        echo "<option value='" . $UnAero['idaeroport'] . "'>";
+                        echo $UnAero['desiaero'] . " " . $UnAero['adresse'];
+                        echo "</option>";
+                    }
+                    ?>
+                </select>
             </div>
             <div>
                 <label for = "aeroarrive" class = "font-regular-blue-16">Aéroport d'arrivé</label>
-                <input type = "number" name = "aeroarrive" value = <?php echo $UnVol['idaeroport2'] ?>>
+                <select name = "aeroarrive" id = "aeroarrive">
+                    <option value = <?php echo $UnVol['idaeroport2'] ?>>
+                        <?php echo $UnVol['idaeroport2'] ?>
+                    </option>
+                    <?php
+                    $LesAero = Selection('aeroport');
+                    foreach ($LesAero as $UnAero) {
+                        echo "<option value='" . $UnAero['idaeroport'] . "'>";
+                        echo $UnAero['desiaero'] . " " . $UnAero['adresse'];
+                        echo "</option>";
+                    }
+                    ?>
+                </select>
             </div>
         </div>
         <div class = "parent">
             <div>
                 <label for = "pilone" class = "font-regular-blue-16">Pilote n°1</label>
                 <select name = "pilone" id = "pilone">
-                    <option value = "">Choisissez un pilote</option>
+                    <option value = <?php echo $UnVol['idpilote1'] ?>>
+                        <?php echo $UnVol['idpilote1'] ?>
+                    </option>
                     <?php
                     $LesPilotes = Selection("pilote");
                     foreach ($LesPilotes as $Pilote) {
@@ -74,7 +100,9 @@ $UnVol = selectWhere("vol", "idvol", $_GET['idvol']);
             <div>
                 <label for = "piltwo" class = "font-regular-blue-16">Pilote n°2</label>
                 <select name = "piltwo" id = "piltwo">
-                    <option value = "">Choisissez un pilote</option>
+                    <option value = <?php echo $UnVol['idpilote2'] ?>>
+                        <?php echo $UnVol['idpilote2'] ?>
+                    </option>
                     <?php
                     $LesPilotes = Selection("pilote");
                     foreach ($LesPilotes as $Pilote) {
