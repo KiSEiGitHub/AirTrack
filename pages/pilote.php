@@ -46,7 +46,7 @@
             echo "<td>" . $unpilote['adresse'] . "</td>";
             if ($_SESSION['rolee'] == 'admin') {
                 echo "<td>";
-                echo "<a href='home.php?page=4&action=sup&idpilote=" . $unpilote['idpilote'] . "'>";
+                echo "<a href='./Suppression.php?idpilote=". $unpilote['idpilote']. "'>";
                 echo "<button class='btn-danger btn' style='margin-right: 5px' name='btnDelete'><i class='fa-solid fa-trash-can'></i></button>";
                 echo "</a>";
                 echo "<a href='home.php?page=4&action=edit&idpilote=" . $unpilote['idpilote'] . "'>";

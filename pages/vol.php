@@ -51,7 +51,7 @@
             echo "<td>" . $unvol['idpilote2'] . "</td>";
             if ($_SESSION['rolee'] == 'admin') {
                 echo "<td>";
-                echo "<a href='home.php?page=2&action=sup&idvol=" . $unvol['idvol'] . "'>";
+                echo "<a href='./Suppression.php?idvol=". $unvol['idvol']. "'>";
                 echo "<button class='btn-danger btn' style='margin-right: 5px' name='btnDelete'><i class='fa-solid fa-trash-can'></i></button>";
                 echo "</a>";
                 echo "<a href='home.php?page=2&action=edit&idvol=" . $unvol['idvol'] . "'>";

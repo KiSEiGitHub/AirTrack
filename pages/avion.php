@@ -44,7 +44,7 @@
             echo "<td>" . $unavion['typeavion'] . "</td>";
             if ($_SESSION['rolee'] == 'admin') {
                 echo "<td>";
-                echo "<a href='home.php?page=3&action=sup&idavion=" . $unavion['idavion'] . "'>";
+                echo "<a href='./Suppression.php?idavion=". $unavion['idavion']. "'>";
                 echo "<button class='btn-danger btn' style='margin-right: 5px' name='btnDelete'><i class='fa-solid fa-trash-can'></i></button>";
                 echo "</a>";
                 echo "<a href='home.php?page=3&action=edit&idavion=" . $unavion['idavion'] . "'>";
