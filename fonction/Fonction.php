@@ -79,3 +79,19 @@ function SearchPlane($mot)
     deconnexion($con);
     return $Data;
 }
+
+function SelectPiloteFromVol($id)
+{
+    $con = connexion();
+    $r = "select * from vol where idpilote1 = $id or idpilote2 = $id";
+
+    if ($con) {
+        $Data = mysqli_query($con, $r);
+        $Dataa = mysqli_fetch_assoc($Data);
+    } else {
+        return null;
+    }
+
+    deconnexion($con);
+    return $Dataa;
+}

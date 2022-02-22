@@ -252,3 +252,13 @@ td {
 ::-webkit-scrollbar {
     display: none;
 }
+
+/* Class pour les informations en plus */
+.span-info {
+    font-size: 24px;
+    color: #0e136b;
+}
+
+.span-resultat {
+    font-size: 20px;
+}
