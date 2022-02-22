@@ -23,11 +23,7 @@
             <th>Grade</th>
             <th>Email</th>
             <th>Adresse</th>
-            <?php
-            if ($_SESSION['rolee'] == 'admin') {
-                ?>
-                <th>Opération</th>
-            <?php } ?>
+            <th>Opération</th>
         </tr>
 
         <?php
@@ -57,13 +53,21 @@
                 echo "</a>";
                 echo "</td>";
             }
+            echo "<td>";
+            if ($_SESSION['rolee'] == 'user') {
+                echo "<td>";
+                echo "<a href='Home.php?page=4&action=loupe&idpilote=" . $unpilote['idpilote'] . "'>";
+                echo "<button class='btn-dark btn' style='margin-left: 5px'><i class='fa-solid fa-magnifying-glass'></i></button>";
+                echo "</a>";
+                echo "</td>";
+            }
             echo "</tr>";
         }
         ?>
     </table>
     <?php
     if (isset($_GET['action'])){
-        if($_GET['action'] == 'loupe'){
+    if ($_GET['action'] == 'loupe'){
     ?>
     <div style = "text-align: center; margin-top: 30px; font-size: 25px">
         <span>Information du pilote : </span>
@@ -104,4 +108,5 @@
     </div>
 
 </div>
-<?php }} ?>
+<?php }
+} ?>
