@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : lun. 14 fév. 2022 à 20:04
+-- Généré le : mer. 23 fév. 2022 à 02:26
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -60,16 +60,16 @@ CREATE TABLE IF NOT EXISTS `aeroport` (
   `adresse` varchar(50) NOT NULL,
   `statut` varchar(20) NOT NULL,
   PRIMARY KEY (`idaeroport`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `aeroport`
 --
 
 INSERT INTO `aeroport` (`idaeroport`, `desiaero`, `adresse`, `statut`) VALUES
-(10, 'Orly', 'France', 'âœ”ï¸'),
-(11, 'PÃ©kin-Capitale', 'Chine', 'âœ”ï¸'),
-(12, 'AÃ©roport international de Dubai', 'Dubai', 'âœ”ï¸');
+(15, 'Paris', 'France', 'OK'),
+(14, 'Marseille', 'France', 'OK'),
+(16, 'Namek', 'France', 'OK');
 
 -- --------------------------------------------------------
 
@@ -85,18 +85,16 @@ CREATE TABLE IF NOT EXISTS `avion` (
   `nbplaces` int(3) NOT NULL,
   `typeavion` varchar(50) NOT NULL,
   PRIMARY KEY (`idavion`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `avion`
 --
 
 INSERT INTO `avion` (`idavion`, `marque`, `etat`, `nbplaces`, `typeavion`) VALUES
-(7, 'FRB476', 'Neuf', 8282, 'Voyage'),
-(8, 'CHB271', 'Neuf', 9281, 'Voyage'),
-(9, 'Rafale', 'Neuf', 2, 'Guerre'),
-(10, 'Mirage', 'Neuf', 2, 'Guerre'),
-(11, 'C-130 HERCULES', 'Neuf', 680, 'Porteur');
+(14, 'ORIK', 'Neuf', 650, 'CroisiÃ¨re'),
+(13, 'FJ25', 'Neuf', 500, 'Voyage'),
+(15, 'N25K', 'Neuf', 350, 'Marchand');
 
 -- --------------------------------------------------------
 
@@ -114,16 +112,16 @@ CREATE TABLE IF NOT EXISTS `pilote` (
   `adresse` varchar(50) NOT NULL,
   `grade` varchar(50) NOT NULL,
   PRIMARY KEY (`idpilote`)
-) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `pilote`
 --
 
 INSERT INTO `pilote` (`idpilote`, `nom`, `prenom`, `age`, `email`, `adresse`, `grade`) VALUES
-(15, 'Alarcon', 'Salim', '18', 'S@gmail.com', 'France', 'Pro'),
-(13, 'LAU', 'Tom', '21', 'T@gmail.com', 'France', 'Pro'),
-(14, 'Garcia', 'Clara', '23', 'C@gmail.com', 'France', 'Pro');
+(19, 'Garcia', 'Clara', '23', 'C@gmail.com', 'France', 'Pro'),
+(17, 'LAU', 'Tom', '21', 'T@gmail.com', 'France', 'Pro'),
+(18, 'Alarcon', 'Salim', '18', 'S@gmail.com', 'France', 'Pro');
 
 -- --------------------------------------------------------
 
@@ -148,15 +146,15 @@ CREATE TABLE IF NOT EXISTS `vol` (
   KEY `idpilote1` (`idpilote1`),
   KEY `idpilote2` (`idpilote2`),
   KEY `idavion` (`idavion`)
-) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `vol`
 --
 
 INSERT INTO `vol` (`idvol`, `desivol`, `duree`, `datevole`, `idavion`, `idaeroport1`, `idaeroport2`, `idpilote1`, `idpilote2`) VALUES
-(27, 'DBCH282', '28192', '2021-11-19', 10, 12, 10, 15, 13),
-(26, 'CHFR281', '2829', '2017-09-20', 7, 10, 11, 15, 13);
+(30, 'VK52', '220', '2022-03-02', 15, 16, 15, 18, 17),
+(29, 'JNR52', '2852', '2022-02-04', 14, 15, 14, 19, 17);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
