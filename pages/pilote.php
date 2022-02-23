@@ -53,7 +53,6 @@
                 echo "</a>";
                 echo "</td>";
             }
-            echo "<td>";
             if ($_SESSION['rolee'] == 'user') {
                 echo "<td>";
                 echo "<a href='Home.php?page=4&action=loupe&idpilote=" . $unpilote['idpilote'] . "'>";
