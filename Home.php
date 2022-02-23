@@ -48,7 +48,9 @@ require_once('./fonction/Update.php');
 <body>
 
 <div class = "Topbar">
-    <img src = "assets/logo.png" alt = "logo">
+    <a href = "Home.php" style="display: inline">
+         <img src = "assets/logo.png" alt = "logo">
+    </a>
     <div class = "leftSide">
         <div class = "PP">
             <?php
